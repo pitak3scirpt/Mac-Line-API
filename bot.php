@@ -18,8 +18,8 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			$text = trim($text);
 			$text = strtolower($text);
-			$text = substr($text,0,2);
-			$text = $text."\n"."By Pitak";
+			$cut2headtext = substr($text,0,2);
+			$text = $cut2headtext."\n"."By Pitak";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
