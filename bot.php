@@ -19,6 +19,7 @@ if (!is_null($events['events'])) {
 			$text = trim($text);
 			$text = strtolower($text);
 			$cut2headtext = substr($text,0,2);
+			$cut3midtext = substr($text,3,3);
 			switch ($cut2headtext) {
 				case "tx":
 					$gentext = "Transfermer";
@@ -32,7 +33,7 @@ if (!is_null($events['events'])) {
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
 			}
-			$text = $gentext."\n"."By Pitak";
+			$text = "ตัวอักษร 2 ตัวแรก คือ ".$cut2headtext."\n"."ตัวอักษร 3 ตัวกลาง คือ ".$cut3midtext."\n"."คำตอบคือ ".$gentext."\n"."By Pitak";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
