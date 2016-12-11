@@ -20,9 +20,61 @@ if (!is_null($events['events'])) {
 			$text = strtolower($text);
 			$cut2headtext = substr($text,0,2);
 			$cut3midtext = substr($text,3,3);
+			$cut3midtext = trim($cut3midtext);
 			switch ($cut2headtext) {
-				case "tx":
-					$gentext = "Transfermer";
+				case "tx":					
+					switch ($cut3midtext) {
+						case "bk" :
+							$gentext = "Transfermer BK";
+							break;
+						case "bn" :
+							$gentext = "Transfermer BN";
+							break;
+						case "bpl" :
+							$gentext = "Transfermer BPL";
+							break;
+						case "chw" :
+							$gentext = "Transfermer CHW";
+							break;
+						case "lpr" :
+							$gentext = "Transfermer LPR";
+							break;
+						case "lla" :
+							$gentext = "Transfermer LLA";
+							break;
+						case "nb" :
+							$gentext = "Transfermer NB";
+							break;
+						case "nco" :
+							$gentext = "Transfermer NCO";
+							break;
+						case "nv" :
+							$gentext = "Transfermer NV";
+							break;
+						case "on" :
+							$gentext = "Transfermer ON";
+							break;
+						case "rps" :
+							$gentext = "Transfermer RPS";
+							break;
+						case "rs" :
+							$gentext = "Transfermer RS";
+							break;
+						case "sb" :
+							$gentext = "Transfermer SB";
+							break;
+						case "sno" :
+							$gentext = "Transfermer SNO";
+							break;
+						case "stb" :
+							$gentext = "Transfermer STB";
+							break;
+						case "tpr" :
+							$gentext = "Transfermer TPR";
+							break;
+						default :
+							$gentext = "Transfermer Unknow Substation";
+					}							
 					break;
 				case "ln":
 					$gentext = "Line";
