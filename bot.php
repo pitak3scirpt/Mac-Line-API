@@ -19,7 +19,20 @@ if (!is_null($events['events'])) {
 			$text = trim($text);
 			$text = strtolower($text);
 			$cut2headtext = substr($text,0,2);
-			$text = $cut2headtext."\n"."By Pitak";
+			switch ($cut2headtext) {
+				case "tx":
+					$gentext = "Transfermer";
+					break;
+				case "ln":
+					$gentext = "Line";
+					break;
+				case "sp":
+					$gentext = "SPP-F";
+					break;
+				default:
+					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
+			}
+			$text = $gentext."\n"."By Pitak";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
