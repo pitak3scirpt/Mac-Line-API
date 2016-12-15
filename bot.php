@@ -40,13 +40,13 @@ if (!is_null($events['events'])) {
 							$gentext = file_get_contents("Tx/TxLPR.txt");
 							break;
 						case "lla" :
-							$gentext = file_get_contents("Tx/TxLLA.txt");
+							$gentext = "ขออภัยไม่มีข้อมูลครับ";
 							break;
 						case "nb" :
 							$gentext = file_get_contents("Tx/TxNB.txt");
 							break;
 						case "nco" :
-							$gentext = file_get_contents("Tx/TxNCO.txt");
+							$gentext = file_get_contents("Tx/TxNV.txt");
 							break;
 						case "nv" :
 							$gentext = file_get_contents("Tx/TxNV.txt");
