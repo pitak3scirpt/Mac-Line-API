@@ -46,9 +46,9 @@ if (!is_null($events['events'])) {
 							$gentext = file_get_contents("Tx/TxNB.txt");
 							break;
 						case "nco" :
-							$gentext = file_get_contents("Tx/NCO.txt");
-							$gentext = substr($gentext,0,2900);
-							//$gentext = strlen($gentext); 3300
+							$gentext = file_get_contents("Tx/NCO1.txt");
+							$gentext_a = file_get_contents("Tx/NCO2.txt");
+							$lengentext_a = strlen($gentext_a);
 							break;
 						case "nv" :
 							$gentext = file_get_contents("Tx/TxNV.txt");
@@ -119,6 +119,38 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
+			if ($lengentext_a > 0) {
+				$text = $gentext_a."\n"."By Pitak Mahaman";
+			
+				// Get replyToken
+				$replyToken = $event['replyToken'];
+
+				// Build message to reply back
+				$messages = [
+					'type' => 'text',
+					'text' => $text
+				];
+
+				// Make a POST Request to Messaging API to reply to sender
+				$url = 'https://api.line.me/v2/bot/message/reply';
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+				];
+				$post = json_encode($data);
+				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+				$ch = curl_init($url);
+				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+				curl_setopt($ch, CURLOPT_PROXY, $proxy);
+                       		curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+				$result = curl_exec($ch);
+				curl_close($ch);
+			}
 		}
 	}
 }
