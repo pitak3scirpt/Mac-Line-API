@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 				case "tx":					
 					switch ($cut3midtext) {
 						case "bk" :
-							$gentext = "Transfermer BK";
+							$gentext = file_get_contents("TxBK.txt");
 							break;
 						case "bn" :
 							$gentext = "Transfermer BN";
