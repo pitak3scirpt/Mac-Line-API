@@ -85,7 +85,7 @@ if (!is_null($events['events'])) {
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
 			}
-			$text = $gentext."\n"."By Pitak";
+			$text = $gentext."\n"."By Pitak Mahaman";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
