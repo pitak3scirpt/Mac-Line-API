@@ -18,4 +18,4 @@ NCO-KT-SPARE ยี่ห้อ JEUMONT SCHNEIDER,-,1990 พิกัด 200 MVA
 NCO-KW1A ยี่ห้อ SIRIWIWAT,26TF,1984 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.03, (OLTC) ,
 NCO-KW1B ยี่ห้อ SIRIWIWAT,26TF,1984 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.95, (OLTC) ,
 NCO-KW2A ยี่ห้อ THAI MAXWELL,DT34424,1990 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.47, (OLTC) ,
-NCO-SR1A ยี่ห้อ MITSUBISHI,SSLR,1989 พิกัด 75 MVA, 525/92 kV ข้อมูลอื่น , (%Z) 3647, (OLTC) ,
+NCO-SR1A ยี่ห้อ MITSUBISHI,SSLR,1989 พิกัด 75 MVA, 525/92 kV ข้อมูลอื่น , (%Z) 3647, (OLTC)
