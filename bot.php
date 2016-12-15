@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 					$gentext = "Line";
 					break;
 				case "sp":
-					$gentext = "SPP-F";
+					$gentext = file_get_contents("SPP/SPP.txt");
 					break;
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
