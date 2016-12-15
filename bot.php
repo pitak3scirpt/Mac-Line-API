@@ -47,8 +47,8 @@ if (!is_null($events['events'])) {
 							break;
 						case "nco" :
 							$gentext = file_get_contents("Tx/NCO1.txt");
-							$gentext_a = file_get_contents("Tx/NCO2.txt");
-							$lengentext_a = strlen($gentext_a);
+							$gentexta = file_get_contents("Tx/NCO2.txt");
+							$lengentexta = strlen($gentexta);
 							break;
 						case "nv" :
 							$gentext = file_get_contents("Tx/TxNV.txt");
@@ -119,8 +119,8 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-			if ($lengentext_a > 0) {
-				$text = $gentext_a."\n"."By Pitak Mahaman";
+			if ($lengentexta > 0) {
+				$text = $gentexta."\n"."By Pitak Mahaman";
 			
 				// Get replyToken
 				$replyToken = $event['replyToken'];
