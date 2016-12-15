@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 							$gentext = file_get_contents("Tx/TxNB.txt");
 							break;
 						case "nco" :
-							$gentext = file_get_contents("Tx/NCO1.txt");
+							$gentext = file_get_contents("Tx/NCO2.txt");
 							$gentexta = file_get_contents("Tx/NCO2.txt");
 							$lengentexta = strlen($gentexta);
 							break;
