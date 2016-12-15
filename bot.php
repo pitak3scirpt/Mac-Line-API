@@ -34,43 +34,43 @@ if (!is_null($events['events'])) {
 							$gentext = file_get_contents("Tx/TxBPL.txt");
 							break;
 						case "chw" :
-							$gentext = "Transfermer CHW";
+							$gentext = file_get_contents("Tx/TxCHW.txt");
 							break;
 						case "lpr" :
-							$gentext = "Transfermer LPR";
+							$gentext = file_get_contents("Tx/TxLPR.txt");
 							break;
 						case "lla" :
-							$gentext = "Transfermer LLA";
+							$gentext = file_get_contents("Tx/TxLLA.txt");
 							break;
 						case "nb" :
-							$gentext = "Transfermer NB";
+							$gentext = file_get_contents("Tx/TxNB.txt");
 							break;
 						case "nco" :
-							$gentext = "Transfermer NCO";
+							$gentext = file_get_contents("Tx/TxNCO.txt");
 							break;
 						case "nv" :
-							$gentext = "Transfermer NV";
+							$gentext = file_get_contents("Tx/TxNV.txt");
 							break;
 						case "on" :
-							$gentext = "Transfermer ON";
+							$gentext = file_get_contents("Tx/TxON.txt");
 							break;
 						case "rps" :
-							$gentext = "Transfermer RPS";
+							$gentext = file_get_contents("Tx/TxRPS.txt");
 							break;
 						case "rs" :
-							$gentext = "Transfermer RS";
+							$gentext = file_get_contents("Tx/TxRS.txt");
 							break;
 						case "sb" :
-							$gentext = "Transfermer SB";
+							$gentext = file_get_contents("Tx/TxSB.txt");
 							break;
 						case "sno" :
-							$gentext = "Transfermer SNO";
+							$gentext = file_get_contents("Tx/TxSNO.txt");
 							break;
 						case "stb" :
-							$gentext = "Transfermer STB";
+							$gentext = file_get_contents("Tx/TxSTB.txt");
 							break;
 						case "tpr" :
-							$gentext = "Transfermer TPR";
+							$gentext = file_get_contents("Tx/TxTPR.txt");
 							break;
 						default :
 							$gentext = "Transfermer Unknow Substation";
