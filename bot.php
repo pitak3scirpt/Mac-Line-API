@@ -85,7 +85,7 @@ if (!is_null($events['events'])) {
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
 			}
-			$text = "ตัวอักษร 2 ตัวแรก คือ ".$cut2headtext."\n"."ตัวอักษร 3 ตัวกลาง คือ ".$cut3midtext."\n"."คำตอบคือ ".$gentext."\n"."By Pitak";
+			$text = $gentext."\n"."By Pitak";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
