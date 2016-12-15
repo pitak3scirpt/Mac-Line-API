@@ -1,0 +1,6 @@
+﻿BK-KT1A ยี่ห้อ TOSHIBA,-,1998 พิกัด 300 MVA, 230/69/22 kV ข้อมูลอื่น YY0D1, (%Z) 17.33, (OLTC) MR, MI1500-123/C-12211W
+BK-KT2A ยี่ห้อ TOSHIBA,-,1998 พิกัด 300 MVA, 230/69/22 kV ข้อมูลอื่น YY0D1, (%Z) 17.36, (OLTC) MR, MI1500-123/C-12211W
+BK-KT3A ยี่ห้อ ABB,-,1997 พิกัด 300 MVA, 230/72.5/22 kV ข้อมูลอื่น YY0D1, (%Z) 17, (OLTC) ABB, UCGRT650/1050C
+BK-KT4A ยี่ห้อ ABB,-,1997 พิกัด 300 MVA, 230/72.5/22 kV ข้อมูลอื่น YY0D1, (%Z) 17, (OLTC) ABB, UCGRT650/1050C
+BK-KW2A ยี่ห้อ TIRATHAI,OIL IMMERSED,1997 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.27, (OLTC) ,
+BK-KW4A ยี่ห้อ TIRATHAI,LH23,1998 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.05, (OLTC) ,

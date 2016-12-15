@@ -1,0 +1,12 @@
+﻿BPL-KT1A ยี่ห้อ MITSUBISHI,SUB-MRF,1973 พิกัด 200 MVA, 230/69/11 kV ข้อมูลอื่น YY0D1, (%Z) 9.25, (OLTC) MITSUBISHI, MRFI1600P-80L/150T
+BPL-KT2A ยี่ห้อ DAIHEN,-,2010 พิกัด 300 MVA, 230/121/11 kV ข้อมูลอื่น YY0D1, (%Z) 16.4, (OLTC) MR, MI1203-170/C
+BPL-KT3A ยี่ห้อ DAIHEN,-,2010 พิกัด 300 MVA, 230/121/11 kV ข้อมูลอื่น YY0D1, (%Z) 16.2, (OLTC) MR, MI1203-170/C
+BPL-KT4A ยี่ห้อ TOSHIBA,-,1990 พิกัด 200 MVA, 230/69/22 kV ข้อมูลอื่น YY0D1, (%Z) 9.35, (OLTC) MR, TI2000/110C-10171
+BPL-KT5A ยี่ห้อ DAIHEN,-,2010 พิกัด 300 MVA, 230/121/11 kV ข้อมูลอื่น YY0D1, (%Z) 16.2, (OLTC) MR, MI1203-170/C
+BPL-KT6A ยี่ห้อ TAKAOKA,-,1989 พิกัด 200 MVA, 230/72.5/11 kV ข้อมูลอื่น YY0D1, (%Z) 13, (OLTC) MR, MI601-150/B
+BPL-KT7A ยี่ห้อ TAKAOKA,-,1989 พิกัด 200 MVA, 220/69/11 kV ข้อมูลอื่น YY0D1, (%Z) 13, (OLTC) MR, MI601-150/B
+BPL-KW1A ยี่ห้อ SIRIWIWAT,34TF,1972 พิกัด 0.25 MVA, 11/0.4 kV ข้อมูลอื่น DY11, (%Z) 3.17, (OLTC) ,
+BPL-KW2A ยี่ห้อ SIRIWIWAT,25TF,1974 พิกัด 0.5 MVA, 11/0.4 kV ข้อมูลอื่น DY11, (%Z) 4.1, (OLTC) ,
+BPL-KW3A ยี่ห้อ SIRIWIWAT,34TF,1980 พิกัด 0.25 MVA, 11/0.4 kV ข้อมูลอื่น DY11, (%Z) 3.68, (OLTC) ,
+BPL-KW4A ยี่ห้อ MITSUBISHI,RA1,1979 พิกัด 1.15 MVA, 11/0.4 kV ข้อมูลอื่น 
+BPL-KW5A ยี่ห้อ SIRIWIWAT,86TF,1982 พิกัด 3 MVA, 11/0.4 kV ข้อมูลอื่น 

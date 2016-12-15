@@ -1,0 +1,7 @@
+﻿NB-KT1A ยี่ห้อ ABB,TrafoStar,2010 พิกัด 300 MVA, 230/72.5/11 kV ข้อมูลอื่น YNA0D1, (%Z) 17.11, (OLTC) ABB, UCGRT 650/1050/C
+NB-KT2A ยี่ห้อ ABB,TrafoStar,2011 พิกัด 300 MVA, 230/72.5/11 kV ข้อมูลอื่น YNA0D1, (%Z) 1.25, (OLTC) ABB, UCGRT 650/1050/C
+NB-KT3A ยี่ห้อ ABB,TrafoStar,2011 พิกัด 300 MVA, 230/72.5/11 kV ข้อมูลอื่น YNA0D1, (%Z) 17.03, (OLTC) ABB, UCGRT 650/1050/C
+NB-KT4A ยี่ห้อ ABB,TrafoStar,2011 พิกัด 300 MVA, 230/72.5/11 kV ข้อมูลอื่น YNA0D1, (%Z) 17.09, (OLTC) ABB, UCGRT 650/1050/C
+NB-KT5A ยี่ห้อ TIRATHAI,PT28000/69,2009 พิกัด 25 MVA, 69/22/11 kV ข้อมูลอื่น 
+NB-KT6A ยี่ห้อ MITSUBISHI,CUB-URS,1969 พิกัด 25 MVA, 69/11 kV ข้อมูลอื่น DY1, (%Z) 13.73, (OLTC) MITSUBISHI, URS-LB6
+NB-KW1A ยี่ห้อ CHAROENCHAI,-,2009 พิกัด 0.5 MVA, 22/.4 kV ข้อมูลอื่น DY1, (%Z) 6.54, (OLTC) ,
