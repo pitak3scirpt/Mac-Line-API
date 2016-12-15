@@ -47,7 +47,7 @@ if (!is_null($events['events'])) {
 							break;
 						case "nco" :
 							$gentext = file_get_contents("Tx/NCO.txt");
-							$gentext = substr($gentext,0,3000);
+							$gentext = substr($gentext,0,2000);
 							//$gentext = strlen($gentext); 3300
 							break;
 						case "nv" :
