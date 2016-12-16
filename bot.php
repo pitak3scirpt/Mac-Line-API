@@ -18,15 +18,23 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			$text = trim($text);
 			$text = strtolower($text);
+			$lentext = strlen($text);
 			$cut2headtext = substr($text,0,2);
 			
 			// Equipment Select tx, ln, sp
 			switch ($cut2headtext) {
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
-					$cut3midtext = trim($cut3midtext);
+					$cut3midtext = trim($cut3midtext);					
 					$cut3lastext = substr($text,7,3);
 					$cut3lastext = trim($cut3lastext);
+					if ($lentext > 9) {
+						$cut3lastext = substr($text,7,3);
+						$cut3lastext = trim($cut3lastext);
+					} else {
+						$cut3lastext = substr($text,6,3);
+						$cut3lastext = trim($cut3lastext);					
+					}
 					// Find txt data name
 					$dataname = "Tx/".$cut3midtext.$cut3lastext.".txt";
 					//$gentext = file_get_contents($dataname);
