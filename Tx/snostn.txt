@@ -1,0 +1,2 @@
+SNO-KW1A ยี่ห้อ TIRATHAI,EILH,1994 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.28, (OLTC) ,
+SNO-KW2A ยี่ห้อ TIRATHAI,EILH,1994 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.21, (OLTC) ,
