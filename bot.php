@@ -15,6 +15,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
+			$touserid = $event['source']['userid'];
 			$text = $event['message']['text'];
 			$text = trim($text);
 			$text = strtolower($text);
@@ -58,7 +59,7 @@ if (!is_null($events['events'])) {
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
 			}
-			$text = $gentext."\n".$lengentext." By Pitak Mahaman";
+			$text = $gentext."\n".$lengentext." By Pitak Mahaman"."\n".$touserid;
 			//$text = "First Code : ".$cut2headtext."\n"."Second Code : ".$cut3midtext."\n".$lengentext." By Pitak Mahaman";
 			
 			// Get replyToken
