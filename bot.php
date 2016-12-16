@@ -47,8 +47,8 @@ if (!is_null($events['events'])) {
 					break;
 				case "ln":
 					$gentext = "Line";
-					$originalContentUrl = "https://github.com/pitak3scirpt/Master-Yoda-Line-API/blob/master/ln/originln.jpg";
-					$previewImageUrl = "https://github.com/pitak3scirpt/Master-Yoda-Line-API/blob/master/ln/previewln.jpg";
+					$originalContentUrl = "https://www.dropbox.com/s/y20d4ygkomhytnr/originln.jpg?dl=0";
+					$previewImageUrl = "https://www.dropbox.com/s/192tpwbgz15pkfj/previewln.jpg?dl=0";
 					$tempsend = "image";
 					break;
 				case "sp":
