@@ -29,9 +29,12 @@ if (!is_null($events['events'])) {
 					if ($lentext > 9) {
 						$cut3lastext = substr($text,7,3);
 						$cut3lastext = trim($cut3lastext);
-					} else {
+					} elseif (strlen($cut3midtext) <3) {
 						$cut3lastext = substr($text,6,3);
 						$cut3lastext = trim($cut3lastext);					
+					} else {
+						$cut3lastext = substr($text,7,3);
+						$cut3lastext = trim($cut3lastext);
 					}
 					// Find txt data name
 					$dataname = "Tx/".$cut3midtext.$cut3lastext.".txt";
