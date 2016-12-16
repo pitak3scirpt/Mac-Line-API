@@ -134,9 +134,11 @@ if (!is_null($events['events'])) {
 			//echo $result . "\r\n";
 
 			// Make Push Messageing
+			$text = $result['displayName']
 			$messages = [
 				'type' => 'text',
-				'text' => $result['displayName'].'\nRequest '.$reqtext
+				'text' => $text
+				//.'\nRequest '.$reqtext
 			];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
