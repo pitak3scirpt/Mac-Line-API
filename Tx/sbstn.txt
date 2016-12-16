@@ -1,0 +1,2 @@
+SB-KW3A ยี่ห้อ TIRATHAI,OIL IMMERSED,1995 พิกัด 0.25 MVA, 11/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.03, (OLTC) ,
+SB-KW4A ยี่ห้อ TIRATHAI,OIL IMMERSED,1995 พิกัด 0.25 MVA, 11/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.03, (OLTC) ,
