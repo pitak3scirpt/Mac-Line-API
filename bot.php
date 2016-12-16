@@ -47,8 +47,8 @@ if (!is_null($events['events'])) {
 					break;
 				case "ln":
 					$gentext = "Line";
-					$originalContentUrl = "https://www.dropbox.com/s/y20d4ygkomhytnr/originln.jpg?dl=0";
-					$previewImageUrl = "https://www.dropbox.com/s/192tpwbgz15pkfj/previewln.jpg?dl=0";
+					$originalContentUrl = "https://drive.google.com/open?id=0B9yMkmcr-2gmaDNXRmJ4U2ZTQ0E";
+					$previewImageUrl = "https://drive.google.com/open?id=0B9yMkmcr-2gmUjNqUEp4QzVKR28";
 					$tempsend = "image";
 					break;
 				case "sp":
