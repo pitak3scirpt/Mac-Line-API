@@ -43,9 +43,13 @@ if (!is_null($events['events'])) {
 					if ($lengentext < 1) {
 						$gentext = "ไม่มีข้อมูลหม้อแปลงที่ร้องขอ ขอภัยครับ";
 					}
+					$tempsend = "text";
 					break;
 				case "ln":
 					$gentext = "Line";
+					$originalContentUrl = "https://github.com/pitak3scirpt/Master-Yoda-Line-API/blob/master/ln/originln.jpg";
+					$previewImageUrl = "https://github.com/pitak3scirpt/Master-Yoda-Line-API/blob/master/ln/previewln.jpg";
+					$tempsend = "image";
 					break;
 				case "sp":
 					$gentext = file_get_contents("SPP/SPP.txt");
@@ -60,10 +64,30 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
-			$messages = [
-				'type' => 'text',
-				'text' => $text
-			];
+			switch ($tempsend) {
+				case "text" :
+					$messages = [
+						'type' => 'text',
+						'text' => $text
+					];
+					break;
+				case "image" :
+					$messages = [
+						'type' => 'image',
+						'originalContentUrl' => $originalContentUrl
+						'previewImageUrl' => $previewImageUrl
+					];
+					break;					
+				default :
+					$messages = [
+						'type' => 'text',
+						'text' => $text
+					];					
+			}
+			//$messages = [
+			//	'type' => 'text',
+			//	'text' => $text
+			//];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
