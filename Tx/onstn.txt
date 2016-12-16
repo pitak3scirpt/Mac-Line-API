@@ -1,0 +1,2 @@
+ON-KW1A ยี่ห้อ CHAROENCHAI,SUN-OHM OIL/MU,2009 พิกัด 500 MVA, 400/230 V kV ข้อมูลอื่น 
+ON-KW2A ยี่ห้อ TIRATHAI,OIL IMMERSED,1998 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.92, (OLTC) ,
