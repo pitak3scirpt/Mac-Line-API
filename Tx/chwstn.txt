@@ -1,0 +1,2 @@
+CHW-KW1A ยี่ห้อ TIRATHAI,LH36,1997 พิกัด 0.25 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.24, (OLTC) ,
+CHW-KW2A ยี่ห้อ TIRATHAI,LH36,1997 พิกัด 0.25 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.24, (OLTC) ,
