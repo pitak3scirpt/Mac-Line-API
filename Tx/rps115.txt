@@ -1,0 +1,1 @@
+RPS-KT3A ยี่ห้อ ABB,TrafoStar,2011 พิกัด 300 MVA, 230/121-22 kV ข้อมูลอื่น YNA0D1, (%Z) 16.19, (OLTC) ABB, UCGRT 650/1050/C
