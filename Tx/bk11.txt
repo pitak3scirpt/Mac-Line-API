@@ -1,0 +1,2 @@
+BK-KW2A ยี่ห้อ TIRATHAI,OIL IMMERSED,1997 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.27, (OLTC) ,
+BK-KW4A ยี่ห้อ TIRATHAI,LH23,1998 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.05, (OLTC) ,
