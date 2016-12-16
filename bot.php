@@ -48,7 +48,8 @@ if (!is_null($events['events'])) {
 				case "ln":
 					$gentext = "Line";
 					$originalContentUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg";
-					$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/previewln.jpg";
+					//$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/previewln.jpg";
+					//$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg";
 					$tempsend = "image";
 					break;
 				case "sp":
@@ -74,8 +75,8 @@ if (!is_null($events['events'])) {
 				case "image" :
 					$messages = [
 						'type' => 'image',
-						'originalContentUrl' => $originalContentUrl ,
-						'previewImageUrl' => $previewImageUrl
+						'originalContentUrl' => $originalContentUrl 
+						//'previewImageUrl' => $previewImageUrl
 					];
 					break;					
 				default :
