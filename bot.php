@@ -17,6 +17,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$touserid = $event['source']['userId'];
 			$text = $event['message']['text'];
+			$reqtext = $text;
 			$text = trim($text);
 			$text = strtolower($text);
 			$lentext = strlen($text);
@@ -135,7 +136,7 @@ if (!is_null($events['events'])) {
 			// Make Push Messageing
 			$messages = [
 				'type' => 'text',
-				'text' => $result['displayName']."\n Request".$text
+				'text' => $result['displayName'].'\nRequest '.$reqtext
 			];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
