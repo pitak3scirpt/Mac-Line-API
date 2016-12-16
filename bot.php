@@ -17,6 +17,8 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$touserid = $event['source']['userId'];
 			$text = $event['message']['text'];
+			$text = mb_convert_encoding($text, "UTF-8");
+			//$text = utf8_encode($text);
 			$reqtext = $text;
 			$text = trim($text);
 			$text = strtolower($text);
