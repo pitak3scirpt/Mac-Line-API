@@ -134,7 +134,7 @@ if (!is_null($events['events'])) {
 			//echo $result . "\r\n";
 
 			// Make Push Messageing
-			$text = $result['displayName']
+			$text = $result['displayName'];
 			$messages = [
 				'type' => 'text',
 				'text' => $text
