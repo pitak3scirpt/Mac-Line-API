@@ -37,8 +37,8 @@ if (!is_null($events['events'])) {
 					}
 					// Find txt data name
 					$dataname = "Tx/".$cut3midtext.$cut3lastext.".txt";
-					//$gentext = file_get_contents($dataname);
-					$gentext = $dataname;
+					$gentext = file_get_contents($dataname);
+					//$gentext = $dataname;
 					switch ($cut3midtext) {
 						case "bk" :
 							// Find txt data name
