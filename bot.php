@@ -19,13 +19,23 @@ if (!is_null($events['events'])) {
 			$text = trim($text);
 			$text = strtolower($text);
 			$cut2headtext = substr($text,0,2);
-			$cut3midtext = substr($text,3,3);
-			$cut3midtext = trim($cut3midtext);
+			
+			// Equipment Select tx, ln, sp
 			switch ($cut2headtext) {
 				case "tx":					
+					$cut3midtext = substr($text,3,3);		
+					$cut3midtext = trim($cut3midtext);
+					$cut3lastext = substr($text,7,3);
+					$cut3lastext = trim($cut3lastext);
+					// Find txt data name
+					$dataname = "Tx/".$cut3midtext.$cut3lastext.".txt";
+					$gentext = file_get_contents($dataname);
+					
 					switch ($cut3midtext) {
 						case "bk" :
-							$gentext = file_get_contents("Tx/TxBK.txt");
+							// Find txt data name
+							//$dataname = "Tx/".$cut3midtext.$cut3lastext.".txt";
+							//$gentext = file_get_contents($dataname);
 							break;
 						case "bn" :
 							$gentext = file_get_contents("Tx/TxBN.txt");
