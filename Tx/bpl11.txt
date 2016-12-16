@@ -1,0 +1,5 @@
+BPL-KW1A ยี่ห้อ SIRIWIWAT,34TF,1972 พิกัด 0.25 MVA, 11/0.4 kV ข้อมูลอื่น DY11, (%Z) 3.17, (OLTC) ,
+BPL-KW2A ยี่ห้อ SIRIWIWAT,25TF,1974 พิกัด 0.5 MVA, 11/0.4 kV ข้อมูลอื่น DY11, (%Z) 4.1, (OLTC) ,
+BPL-KW3A ยี่ห้อ SIRIWIWAT,34TF,1980 พิกัด 0.25 MVA, 11/0.4 kV ข้อมูลอื่น DY11, (%Z) 3.68, (OLTC) ,
+BPL-KW4A ยี่ห้อ MITSUBISHI,RA1,1979 พิกัด 1.15 MVA, 11/0.4 kV ข้อมูลอื่น 
+BPL-KW5A ยี่ห้อ SIRIWIWAT,86TF,1982 พิกัด 3 MVA, 11/0.4 kV ข้อมูลอื่น 
