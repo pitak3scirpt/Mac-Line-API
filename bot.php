@@ -85,15 +85,15 @@ if (!is_null($events['events'])) {
 						'text' => $text
 					];					
 			}
-			$messages = [
-				'type' => 'text',
-				'text' => "ส่งข้อความ++"
-			];
-			$images = [
-				'type' => 'image',
-				'originalContentUrl' => "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg" ,
-				'previewImageUrl' => "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg"
-			];
+			//$messages = [
+			//	'type' => 'text',
+			//	'text' => "ส่งข้อความ++"
+			//];
+			//$images = [
+			//	'type' => 'image',
+			//	'originalContentUrl' => "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg" ,
+			//	'previewImageUrl' => "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg"
+			//];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
