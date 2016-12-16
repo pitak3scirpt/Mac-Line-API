@@ -1,0 +1,3 @@
+NB-KT5A ยี่ห้อ TIRATHAI,PT28000/69,2009 พิกัด 25 MVA, 69/22/11 kV ข้อมูลอื่น 
+NB-KT6A ยี่ห้อ MITSUBISHI,CUB-URS,1969 พิกัด 25 MVA, 69/11 kV ข้อมูลอื่น DY1, (%Z) 13.73, (OLTC) MITSUBISHI, URS-LB6
+NB-KW1A ยี่ห้อ CHAROENCHAI,-,2009 พิกัด 0.5 MVA, 22/.4 kV ข้อมูลอื่น DY1, (%Z) 6.54, (OLTC) ,
