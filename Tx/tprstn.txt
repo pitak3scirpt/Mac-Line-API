@@ -1,0 +1,2 @@
+TPR-KW1A ยี่ห้อ TIRATHAI,OIL IMMERSED,1997 พิกัด 0.5 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.26, (OLTC) ,
+TPR-KW2A ยี่ห้อ THAI MAXWELL,DT64424,- พิกัด 0.5 MVA, 11/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.94, (OLTC) ,
