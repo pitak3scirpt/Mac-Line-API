@@ -1,0 +1,2 @@
+BN-KW1A ยี่ห้อ PRECISE,CONVENTIONAL,2005 พิกัด 0.5 MVA, 11/0.4 kV ข้อมูลอื่น DY1, (%Z) 7, (OLTC) ,
+BN-KW2A ยี่ห้อ PRECISE,CONVENTIONAL,2005 พิกัด 0.5 MVA, 11/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.85, (OLTC) ,
