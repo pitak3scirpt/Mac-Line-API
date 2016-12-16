@@ -1,0 +1,2 @@
+RPS-KW1A ยี่ห้อ EKARAT,ONAN,1996 พิกัด 0.25 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.05, (OLTC) ,
+RPS-KW2A ยี่ห้อ EKARAT,ONAN,1996 พิกัด 0.25 MVA, 22/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.07, (OLTC) ,
