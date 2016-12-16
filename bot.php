@@ -6,7 +6,7 @@ $access_token = 'TuPeAEFb91uGz4kPxjnMeZ6QaAGrLK05ZQcO5P1zdTNr3bYhATznR5S9ef2Xr/7
 
 // Get POST body content
 $content = file_get_contents('php://input');
-$content = iconv(mb_detect_encoding($content, mb_detect_order(), true), "UTF-8", $content);
+//$content = iconv(mb_detect_encoding($content, mb_detect_order(), true), "UTF-8", $content);
 //$content = mb_convert_encoding($content, 'UTF-8');
 // Parse JSON
 $events = json_decode($content, true);
