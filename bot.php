@@ -59,8 +59,8 @@ if (!is_null($events['events'])) {
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
 			}
-			$text = $gentext."\n".$lengentext." By Pitak Mahaman";
-			//$text = $gentext."\n".$lengentext." By Pitak Mahaman"."\n".$touserid;
+			//$text = $gentext."\n".$lengentext." By Pitak Mahaman";
+			$text = $gentext."\n".$lengentext." By Pitak Mahaman"."\n".$touserid;
 			//$text = "First Code : ".$cut2headtext."\n"."Second Code : ".$cut3midtext."\n".$lengentext." By Pitak Mahaman";
 			
 			// Get replyToken
