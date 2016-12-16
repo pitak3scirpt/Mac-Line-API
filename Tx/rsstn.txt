@@ -1,0 +1,3 @@
+RS-KW1A ยี่ห้อ OSAKA,OA,1977 พิกัด 0.5 MVA, 11/0.4 kV ข้อมูลอื่น DY1, (%Z) 4.3, (OLTC) ,
+RS-KW2A ยี่ห้อ TIRATHAI,EILH,1992 พิกัด 0.5 MVA, 11/0.4 kV ข้อมูลอื่น DY1, (%Z) 6.02, (OLTC) ,
+RS-KW3A ยี่ห้อ THAI MAXWELL,DT64424,1991 พิกัด 0.5 MVA, 11/0.4 kV ข้อมูลอื่น DY1, (%Z) 5.98, (OLTC) ,
