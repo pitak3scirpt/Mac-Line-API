@@ -120,24 +120,22 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 			
 			// Find User Data
-			//$url = 'https://api.line.me/v2/bot/profile/'.$touserid;
-			//$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-			//$ch = curl_init($url);
-			//curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-			//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			//curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-			//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			//curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			//curl_setopt($ch, CURLOPT_PROXY, $proxy);
-                        //curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-			//$result = curl_exec($ch);
-			//curl_close($ch);
+			$url = 'https://api.line.me/v2/bot/profile/'.$touserid;
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_PROXY, $proxy);
+                        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+			$result = curl_exec($ch);
+			curl_close($ch);
 			//echo $result . "\r\n";
 
 			// Make Push Messageing
 			$messages = [
 				'type' => 'text',
-				'text' => $touserid
+				'text' => $result['displayName']."\n Request".$text
 			];
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
