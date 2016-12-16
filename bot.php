@@ -134,7 +134,7 @@ if (!is_null($events['events'])) {
 			//echo $result . "\r\n";
 			$events = json_decode($result, true);
 			// Make Push Messageing
-			$text = $result['displayName'];
+			$text = $events['displayName'];
 			$messages = [
 				'type' => 'text',
 				'text' => $text
