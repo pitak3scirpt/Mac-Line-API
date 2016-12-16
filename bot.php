@@ -74,7 +74,7 @@ if (!is_null($events['events'])) {
 				case "image" :
 					$messages = [
 						'type' => 'image',
-						'originalContentUrl' => $originalContentUrl
+						'originalContentUrl' => $originalContentUrl ,
 						'previewImageUrl' => $previewImageUrl
 					];
 					break;					
