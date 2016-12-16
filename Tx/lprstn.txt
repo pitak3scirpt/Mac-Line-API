@@ -1,0 +1,2 @@
+LPR-KW1A ยี่ห้อ CHAROENCHAI,-,2009 พิกัด 0.5 MVA, 22/.4 kV ข้อมูลอื่น DY1, (%Z) 6.61, (OLTC) ,
+LPR-KW2A ยี่ห้อ CHAROENCHAI,-,2009 พิกัด 0.5 MVA, 22/.4 kV ข้อมูลอื่น DY1, (%Z) 6.61, (OLTC) ,
