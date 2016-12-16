@@ -25,9 +25,7 @@ if (!is_null($events['events'])) {
 			switch ($cut2headtext) {
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
-					$cut3midtext = trim($cut3midtext);					
-					$cut3lastext = substr($text,7,3);
-					$cut3lastext = trim($cut3lastext);
+					$cut3midtext = trim($cut3midtext);
 					if ($lentext > 9) {
 						$cut3lastext = substr($text,7,3);
 						$cut3lastext = trim($cut3lastext);
@@ -38,64 +36,10 @@ if (!is_null($events['events'])) {
 					// Find txt data name
 					$dataname = "Tx/".$cut3midtext.$cut3lastext.".txt";
 					$gentext = file_get_contents($dataname);
-					//$gentext = $dataname;
-					switch ($cut3midtext) {
-						case "bk" :
-							// Find txt data name
-							//$dataname = "Tx/".$cut3midtext.$cut3lastext.".txt";
-							//$gentext = file_get_contents($dataname);
-							break;
-						case "bn" :
-							$gentext = file_get_contents("Tx/TxBN.txt");
-							break;
-						case "bpl" :
-							$gentext = file_get_contents("Tx/TxBPL.txt");
-							break;
-						case "chw" :
-							$gentext = file_get_contents("Tx/TxCHW.txt");
-							break;
-						case "lpr" :
-							$gentext = file_get_contents("Tx/TxLPR.txt");
-							break;
-						case "lla" :
-							$gentext = "ขออภัยไม่มีข้อมูลครับ";
-							break;
-						case "nb" :
-							$gentext = file_get_contents("Tx/TxNB.txt");
-							break;
-						case "nco" :
-							$gentext = file_get_contents("Tx/NCO2.txt");
-							$gentexta = file_get_contents("Tx/NCO2.txt");
-							$lengentexta = strlen($gentexta);
-							break;
-						case "nv" :
-							$gentext = file_get_contents("Tx/TxNV.txt");
-							break;
-						case "on" :
-							$gentext = file_get_contents("Tx/TxON.txt");
-							break;
-						case "rps" :
-							$gentext = file_get_contents("Tx/TxRPS.txt");
-							break;
-						case "rs" :
-							$gentext = file_get_contents("Tx/TxRS.txt");
-							break;
-						case "sb" :
-							$gentext = file_get_contents("Tx/TxSB.txt");
-							break;
-						case "sno" :
-							$gentext = file_get_contents("Tx/TxSNO.txt");
-							break;
-						case "stb" :
-							$gentext = file_get_contents("Tx/TxSTB.txt");
-							break;
-						case "tpr" :
-							$gentext = file_get_contents("Tx/TxTPR.txt");
-							break;
-						default :
-							$gentext = "Transfermer Unknow Substation";
-					}							
-					break;
+					$lengentext = strlen($gentext);
+					if ($lengentext < 1) {
+						$gentext = "ไม่มีข้อมูลหม้อแปลงที่ร้องขอ ขอภัยครับ";
+					}
 				case "ln":
 					$gentext = "Line";
 					break;
@@ -105,7 +49,7 @@ if (!is_null($events['events'])) {
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
 			}
-			$text = $gentext."\n"."By Pitak Mahaman";
+			$text = $gentext."\n".$lengentext." By Pitak Mahaman";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
@@ -137,38 +81,6 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-			if ($lengentexta > 0) {
-				$text = $gentexta."\n"."By Pitak Mahaman";
-			
-				// Get replyToken
-				$replyToken = $event['replyToken'];
-
-				// Build message to reply back
-				$messages = [
-					'type' => 'text',
-					'text' => $text
-				];
-
-				// Make a POST Request to Messaging API to reply to sender
-				$url = 'https://api.line.me/v2/bot/message/reply';
-				$data = [
-					'replyToken' => $replyToken,
-					'messages' => [$messages],
-				];
-				$post = json_encode($data);
-				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-
-				$ch = curl_init($url);
-				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-				curl_setopt($ch, CURLOPT_PROXY, $proxy);
-                       		curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-				$result = curl_exec($ch);
-				curl_close($ch);
-			}
 		}
 	}
 }
