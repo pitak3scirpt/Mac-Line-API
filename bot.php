@@ -6,6 +6,7 @@ $access_token = 'TuPeAEFb91uGz4kPxjnMeZ6QaAGrLK05ZQcO5P1zdTNr3bYhATznR5S9ef2Xr/7
 
 // Get POST body content
 $content = file_get_contents('php://input');
+$content = mb_convert_encoding($content, 'UTF-8');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
@@ -17,7 +18,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$touserid = $event['source']['userId'];
 			$text = $event['message']['text'];
-			$text = mb_convert_encoding($text, "UTF-8");
+			//$text = mb_convert_encoding($text, "UTF-8");
 			//$text = utf8_encode($text);
 			$reqtext = $text;
 			$text = trim($text);
