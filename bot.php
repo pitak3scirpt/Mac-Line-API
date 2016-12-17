@@ -15,8 +15,8 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when Follow me.
-		if ($event['type'] == 'join') {
-			// Get user join me
+		if (($event['type'] == 'follow') or ($event['type'] == 'join')) {
+			// Get user follow or join me
 			$touserid = $event['source']['userId'];
 			// Gen Text Reply
 			$gentext = "ขอบคุณที่ติดตามเรา เราขอตรวจสอบสักครู่ก่อนอนุญาตให้ Bot ตอบสนองคุณ";
