@@ -15,17 +15,17 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when Follow me.
-		if ($event['type'] == 'follow') {
-			// Get user follow me
+		if ($event['type'] == 'join') {
+			// Get user join me
 			$touserid = $event['source']['userId'];
 			// Gen Text Reply
-			$gentext = " ขอบคุณที่ติดตามเรา เราขอตรวจสอบสักครู่ก่อนอนุญาตให้ Bot ตอบสนองคุณ";
+			$gentext = "ขอบคุณที่ติดตามเรา เราขอตรวจสอบสักครู่ก่อนอนุญาตให้ Bot ตอบสนองคุณ";
 			// Get Replytoken
 			$replyToken = $event['replyToken'];
 			//Make a POST Request to Messaging API to reply to follower
 			$messages = [
 				'type' => 'text',
-				'text' => "ส่งข้อความ++"
+				'text' => $gentext
 			];
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
