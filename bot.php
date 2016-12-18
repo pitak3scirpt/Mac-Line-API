@@ -141,7 +141,8 @@ if (!is_null($events['events'])) {
 					if ($touserid == $adminuser) {
 						$gentext = $adminuser;
 					} else {
-						$gentext = "คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block";
+						$gentext = strpos($touserid,$adminuser);
+						$gentext = $gentext."\nคุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block";
 					}
 					$tempsend = "text";
 					break;
@@ -226,7 +227,7 @@ if (!is_null($events['events'])) {
 			// Make Push Messageing
 			$displayName = $events['displayName'];
 			$userId = $events['userId'];
-			$text = $displayName."\n".$userId."\nส่งข้อมความ".$reqtext;
+			$text = $displayName."\n".$userId."\nส่งข้อมความ ".$reqtext;
 			$messages = [
 				'type' => 'text',
 				'text' => $text
