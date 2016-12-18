@@ -91,7 +91,7 @@ if (!is_null($events['events'])) {
 
 			echo $result . "\r\n";
 		}
-		
+			
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
@@ -136,8 +136,8 @@ if (!is_null($events['events'])) {
 					$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg";
 					$tempsend = "image";
 					break;
-				case "sp":
-					$gentext = file_get_contents("SPP/SPP.txt");
+				case "cn":
+					$adminuser = file_get_contents("userId/admin.txt");
 					break;
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
