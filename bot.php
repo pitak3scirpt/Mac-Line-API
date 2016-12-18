@@ -142,7 +142,7 @@ if (!is_null($events['events'])) {
 						$gentext = $adminuser;
 					} else {
 						$gentext = strpos($touserid,$adminuser);
-						$gentext = $gentext."\nคุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block";
+						$gentext = $gentext."\n"."คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block"."\n".$touserid."\n".$adminuser;
 					}
 					$tempsend = "text";
 					break;
