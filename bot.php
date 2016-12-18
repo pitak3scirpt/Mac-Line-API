@@ -140,10 +140,14 @@ if (!is_null($events['events'])) {
 					$adminuser = file_get_contents("userId/admin.txt");
 					$ttouserid = trim($touserid);
 					$tadminuser = trim($adminuser);
-					$gentext = strrpos($tadminuser,$ttouserid."aDDF");
+					//$gentext = strrpos($tadminuser,$ttouserid);
 					if ($ttouserid == $tadminuser) {
-						$gentext = $gentext."\n".$tadminuser;
-						$gentext = $gentext."\n"."Thank you, Admin."."\n".$ttouserid."\n".$tadminuser;
+						//$gentext = $tadminuser;
+						//$gentext = $gentext."\n"."Thank you, Admin."."\n".$ttouserid."\n".$tadminuser;
+						$gentext = "Thank you, Admin."."\n".;
+						$cut3midtext = substr($text,3,3);		
+						$cut3midtext = trim($cut3midtext);
+						$gentext = $gentext.$cut3midtext;
 					} else {
 						//$gentext = strpos($ttouserid,$tadminuser);
 						$gentext = $gentext."\n"."คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block"."\n".$ttouserid."\n".$tadminuser;
