@@ -138,11 +138,14 @@ if (!is_null($events['events'])) {
 					break;
 				case "cn":
 					$adminuser = file_get_contents("userId/admin.txt");
-					if ($touserid == $adminuser) {
-						$gentext = $adminuser;
+					$ttouserid = trim($touserid);
+					$tadminuser = trim($adminuser);
+					if ($ttouserid == $tadminuser) {
+						$gentext = $tadminuser;
+						$gentext = $gentext."\n"."Thank you, Admin."."\n".$ttouserid."\n".$tadminuser;
 					} else {
-						$gentext = strpos($touserid,$adminuser);
-						$gentext = $gentext."\n"."คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block"."\n".$touserid."\n".$adminuser;
+						$gentext = strpos($ttouserid,$tadminuser);
+						$gentext = $gentext."\n"."คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block"."\n".$ttouserid."\n".$tadminuser;
 					}
 					$tempsend = "text";
 					break;
@@ -159,7 +162,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			switch ($tempsend) {
 				case "text" :
-					$text = $gentext."\n".$lengentext." Solfware By Pitak Mahaman"."\n";
+					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
 					$messages = [
 						'type' => 'text',
 						'text' => $text
@@ -173,7 +176,7 @@ if (!is_null($events['events'])) {
 					];
 					break;					
 				default :
-					$text = $gentext."\n".$lengentext." Solfware By Pitak Mahaman"."\n";
+					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
 					$messages = [
 						'type' => 'text',
 						'text' => $text
