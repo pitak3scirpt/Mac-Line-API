@@ -140,7 +140,7 @@ if (!is_null($events['events'])) {
 					$adminuser = file_get_contents("userId/admin.txt");
 					$ttouserid = trim($touserid);
 					$tadminuser = trim($adminuser);
-					$gentext = strrpos($tadminuser,$ttouserid);
+					$gentext = strrpos($tadminuser,$ttouserid."aDDF");
 					if ($ttouserid == $tadminuser) {
 						$gentext = $gentext."\n".$tadminuser;
 						$gentext = $gentext."\n"."Thank you, Admin."."\n".$ttouserid."\n".$tadminuser;
