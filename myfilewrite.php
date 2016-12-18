@@ -5,4 +5,8 @@ fwrite($myfile, $txt);
 $txt = "Jane Doe\n";
 fwrite($myfile, $txt);
 fclose($myfile);
+$myfile = file_get_contents("jedicouncil.txt");
+
+echo $myfile;
+
 ?>
