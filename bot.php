@@ -138,10 +138,10 @@ if (!is_null($events['events'])) {
 					break;
 				case "cn":
 					$adminuser = file_get_contents("userId/admin.txt");
-					if $touserid == $adminuser {
+					if ($touserid == $adminuser) {
 						$gentext = $adminuser;
 					} else {
-						$gentext = "คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block;
+						$gentext = "คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block";
 					}
 					$tempsend = "text";
 					break;
