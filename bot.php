@@ -138,6 +138,7 @@ if (!is_null($events['events'])) {
 					break;
 				case "cn":
 					$adminuser = file_get_contents("userId/admin.txt");
+					$gentext = $adminuser;
 					break;
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
