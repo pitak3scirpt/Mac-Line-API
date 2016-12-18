@@ -230,7 +230,7 @@ if (!is_null($events['events'])) {
 			// Make Push Messageing
 			$displayName = $events['displayName'];
 			$userId = $events['userId'];
-			$text = $displayName."\n".$userId."\nส่งข้อมความ ".$reqtext;
+			$text = $displayName."\n".$userId."\nส่งข้อความ\n".$reqtext;
 			$messages = [
 				'type' => 'text',
 				'text' => $text
