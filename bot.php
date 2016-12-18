@@ -139,20 +139,22 @@ if (!is_null($events['events'])) {
 				case "cn":
 					$adminuser = file_get_contents("userId/admin.txt");
 					$gentext = $adminuser;
+					$tempsend = "text";
 					break;
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
+					$tempsend = "text";
 			}
 			//$text = $gentext."\n".$lengentext." By Pitak Mahaman";
-			$text = $gentext."\n".$lengentext." By Pitak Mahaman"."\n".$touserid;
+			//$text = $gentext."\n".$lengentext." Solfware By Pitak Mahaman"."\n";
 			//$text = "First Code : ".$cut2headtext."\n"."Second Code : ".$cut3midtext."\n".$lengentext." By Pitak Mahaman";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-
 			// Build message to reply back
 			switch ($tempsend) {
 				case "text" :
+					$text = $gentext."\n".$lengentext." Solfware By Pitak Mahaman"."\n";
 					$messages = [
 						'type' => 'text',
 						'text' => $text
@@ -166,6 +168,7 @@ if (!is_null($events['events'])) {
 					];
 					break;					
 				default :
+					$text = $gentext."\n".$lengentext." Solfware By Pitak Mahaman"."\n";
 					$messages = [
 						'type' => 'text',
 						'text' => $text
@@ -219,7 +222,7 @@ if (!is_null($events['events'])) {
 			// Make Push Messageing
 			$displayName = $events['displayName'];
 			$userId = $events['userId'];
-			$text = $displayName."\n".$userId;
+			$text = $displayName."\n".$userId."\nส่งข้อมความ".$reqtext;
 			$messages = [
 				'type' => 'text',
 				'text' => $text
