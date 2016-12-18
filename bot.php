@@ -144,7 +144,7 @@ if (!is_null($events['events'])) {
 					if ($ttouserid == $tadminuser) {
 						//$gentext = $tadminuser;
 						//$gentext = $gentext."\n"."Thank you, Admin."."\n".$ttouserid."\n".$tadminuser;
-						$gentext = "Thank you, Admin."."\n".;
+						$gentext = "Thank you, Admin.";
 						//$cut3midtext = substr($text,3,3);		
 						//$cut3midtext = trim($cut3midtext);
 						//$gentext = $gentext."\n".$cut3midtext;
