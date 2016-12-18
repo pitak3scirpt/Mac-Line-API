@@ -145,9 +145,9 @@ if (!is_null($events['events'])) {
 						//$gentext = $tadminuser;
 						//$gentext = $gentext."\n"."Thank you, Admin."."\n".$ttouserid."\n".$tadminuser;
 						$gentext = "Thank you, Admin.";
-						//$cut3midtext = substr($text,3,3);		
-						//$cut3midtext = trim($cut3midtext);
-						//$gentext = $gentext."\n".$cut3midtext;
+						$cut3midtext = substr($text,3,3);		
+						$cut3midtext = trim($cut3midtext);
+						$gentext = $gentext."\n".$cut3midtext;
 					} else {
 						//$gentext = strpos($ttouserid,$tadminuser);
 						$gentext = $gentext."\n"."คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block"."\n".$ttouserid."\n".$tadminuser;
