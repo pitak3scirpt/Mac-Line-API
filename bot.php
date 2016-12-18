@@ -140,11 +140,12 @@ if (!is_null($events['events'])) {
 					$adminuser = file_get_contents("userId/admin.txt");
 					$ttouserid = trim($touserid);
 					$tadminuser = trim($adminuser);
+					$gentext = strrpos($tadminuser,$ttouserid);
 					if ($ttouserid == $tadminuser) {
-						$gentext = $tadminuser;
+						$gentext = $gentext."\n".$tadminuser;
 						$gentext = $gentext."\n"."Thank you, Admin."."\n".$ttouserid."\n".$tadminuser;
 					} else {
-						$gentext = strpos($ttouserid,$tadminuser);
+						//$gentext = strpos($ttouserid,$tadminuser);
 						$gentext = $gentext."\n"."คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block"."\n".$ttouserid."\n".$tadminuser;
 					}
 					$tempsend = "text";
