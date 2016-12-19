@@ -1,7 +1,6 @@
 <?php
-echo "Hello LINE BOT <br>";
-echo "ทดสอบ Test Tx BK TEXT <br>";
-$buffer = file_get_contents("TxBK.txt");
-/*$buffer = iconv("UTF-8", "ISO-8859-1//TRANSLIT", $buffer);*/
-echo $buffer;
+echo "Hello Master Yoda Line API <br>";
+echo "ทดสอบ Test Jedi Council TEXT File<br>";
+$myfile = file_get_contents("jedicouncil.txt");
+echo $myfile;
 ?>
