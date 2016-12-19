@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 			// Get user follow or join me
 			$touserid = $event['source']['userId'];
 			// Gen Text Reply
-			$gentext = "ขอบคุณที่ติดตามเรา เราขอตรวจสอบสักครู่ก่อนอนุญาตให้ Bot ตอบสนองคุณ";
+			$gentext = "ขอบคุณที่ติดตามเรา";
 			// Get Replytoken
 			$replyToken = $event['replyToken'];
 			//Make a POST Request to Messaging API to reply to follower
