@@ -2,7 +2,7 @@
 # This function reads your DATABASE_URL config var and returns a connection
 # string suitable for pg_connect. Put this in your app.
 function pg_connection_string_from_database_url() {
-  extract(parse_url($_ENV["DATABASE_URL"]));
+  extract(parse_url($_ENV["https://data.heroku.com/datastore/af1f54e5-48a2-4109-8f6d-faa86a09e276"]));
   return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
 }
 # Here we establish the connection. Yes, that's all.
