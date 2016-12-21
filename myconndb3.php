@@ -1,7 +1,8 @@
 <?php
 
   //create a connection string from the PG database URL and then use it to connect
-  $url=parse_url(getenv("HEROKU_POSTGRESQL_GREEN_URL"));
+  //$url=parse_url(getenv("HEROKU_POSTGRESQL_GREEN_URL"));
+  $url=parse_url(getenv("https://data.heroku.com/datastore/9c32e725-3baa-4881-b1b8-91ebd423af41"));
 
   $host = $url["host"];
   $port = $url["port"];
