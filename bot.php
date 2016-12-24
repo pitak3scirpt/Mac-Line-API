@@ -165,12 +165,12 @@ if (!is_null($events['events'])) {
 						$cut3lastext = substr($text,7,3);
 						$cut3lastext = trim($cut3lastext);
 					}
-					$bcode = false;
+					/*$bcode = false;
 					if (($cut3lastext == "inf") or ($cut3lastext == "con")) {
 						$bcode = true;
 					}
 					// Find txt data name
-					if ($bsubname == true) or ($bcode == true) {
+					if ($bsubname) and ($bcode) {
 						$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
 						$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$previewImageUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
@@ -181,7 +181,9 @@ if (!is_null($events['events'])) {
 					} else {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
 						$tempsend = "t1";
-					}				
+					}*/	
+					$gentext = "คำขอของท่านไม่ถูกต้อง";
+					$tempsend = "t1";
 					break;
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
@@ -260,10 +262,10 @@ if (!is_null($events['events'])) {
 					$text = $gentext."\nPlatform By Line Application";	
 					//$messages = t1($text);	
 					//$data = data1($replyToken,$messages);
-					$originalContentUrl1 = $originalContentUrl;
-					$originalContentUrl2 = $originalContentUrl;
-					$previewImageUrl1 = $previewImageUrl;
-					$previewImageUrl2 = $previewImageUrl;
+					//$originalContentUrl1 = $originalContentUrl;
+					//$originalContentUrl2 = $originalContentUrl;
+					//$previewImageUrl1 = $previewImageUrl;
+					//$previewImageUrl2 = $previewImageUrl;
 					$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
 					break;	
 				default :
