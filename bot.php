@@ -256,8 +256,10 @@ if (!is_null($events['events'])) {
 					$data = data1($replyToken,$messages);
 					break;	
 				case "t1im2" :
-					$text = $gentext."\nPlatform By Line Application"."\n";
-					$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
+					$text = $gentext."\nPlatform By Line Application"."\n";	
+					$messages = t1($text);	
+					$data = data1($replyToken,$messages);
+					//$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
 					break;	
 				default :
 					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
