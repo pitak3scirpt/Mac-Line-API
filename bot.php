@@ -131,18 +131,19 @@ if (!is_null($events['events'])) {
 					// Find txt data name
 					$dataname = "Tx/".$cut3midtext.$cut3lastext.".txt";
 					$gentext = file_get_contents($dataname);
-					$lengentext = strlen($gentext);
+					$lengentext = strlen($gentext)." ตัวอักษร";
 					if ($lengentext < 1) {
 						$gentext = "ไม่มีข้อมูลหม้อแปลงที่ร้องขอ ขอภัยครับ";
 					}
-					$tempsend = "text";
+					$tempsend = "t1";
 					break;
 				case "ln":
 					$gentext = "Line";
 					$originalContentUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg";
 					//$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/previewln.jpg";
 					$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg";
-					$tempsend = "image";
+					$lengentext = "1 ภาพ";
+					$tempsend = "im1";
 					break;
 				case "cn":
 					$adminuser = file_get_contents("userId/admin.txt");
@@ -156,15 +157,18 @@ if (!is_null($events['events'])) {
 						$cut3midtext = substr($text,3,3);		
 						$cut3midtext = trim($cut3midtext);
 						$gentext = $gentext."\n".$cut3midtext;
+						$lengentext = strlen($gentext)." ตัวอักษร";
 					} else {
 						//$gentext = strpos($ttouserid,$tadminuser);
 						$gentext = $gentext."\n"."คุณไม่ใช่ Admin การใช้คำสั่งนี้ จะทำให้คุณถูก Block"."\n".$ttouserid."\n".$tadminuser;
+						$lengentext = strlen($gentext)." ตัวอักษร";
 					}
-					$tempsend = "text";
+					$tempsend = "t1";
 					break;
 				default:
 					$gentext = "ขออภัย ระบบไม่สามารถหาข้อมูลได้";
-					$tempsend = "text";
+					$lengentext = strlen($gentext)." ตัวอักษร";
+					$tempsend = "t1";
 			}
 			//$text = $gentext."\n".$lengentext." By Pitak Mahaman";
 			//$text = $gentext."\n".$lengentext." Solfware By Pitak Mahaman"."\n";
@@ -174,12 +178,12 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
 			switch ($tempsend) {
-				case "text" :
-					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
+				case "t1" :
+					$text = $gentext."\nPlatform By Line Application"."\n";
 					$messages = t1($text);
 					//$data = data1($replyToken,$messages);
 					break;
-				case "image" :
+				case "im1" :
 					$messages = [
 						'type' => 'image',
 						'originalContentUrl' => $originalContentUrl ,
@@ -238,12 +242,8 @@ if (!is_null($events['events'])) {
 			// Make Push Messageing
 			$displayName = $events['displayName'];
 			$userId = $events['userId'];
-			$text = $displayName."\n".$userId."\nส่งข้อความ\n".$reqtext;
-			$messages = [
-				'type' => 'text',
-				'text' => $text
-				//.'\nRequest '.$reqtext
-			];
+			$text = $displayName."\n".$userId."\nส่งข้อความRequestคือ\n".$reqtext."\nตอบกลับไป ".$lengentext;
+			$messages = t1($text);
 			$url = 'https://api.line.me/v2/bot/message/push';
 			$data = [
 				'to' => 'Uf95ee3607bc3d6696b2116de202f97d3',
