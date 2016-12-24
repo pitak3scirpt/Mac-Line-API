@@ -9,6 +9,15 @@ function t1($tt1)
 		];
 	return $messages;
 }
+function im1($originalContentUrl,$previewImageUrl)
+{
+	$messages = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl ,
+		'previewImageUrl' => $previewImageUrl
+	];
+	return $messages;
+}
 // Function Return data
 function data1($replyToken,$messages)
 {
@@ -100,7 +109,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 			
-		// Reply only when message sent is in 'text' format
+		// Reply only  message sent is in 'text' format, 'image' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$touserid = $event['source']['userId'];
@@ -184,18 +193,13 @@ if (!is_null($events['events'])) {
 					//$data = data1($replyToken,$messages);
 					break;
 				case "im1" :
-					$messages = [
-						'type' => 'image',
-						'originalContentUrl' => $originalContentUrl ,
-						'previewImageUrl' => $previewImageUrl
-					];
+					$messages = im1($originalContentUrl,$previewImageUrl);
+					//$data = data1($replyToken,$messages);
 					break;					
 				default :
 					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
-					$messages = [
-						'type' => 'text',
-						'text' => $text
-					];					
+					$messages = t1($text);	
+					//$data = data1($replyToken,$messages);
 			}
 			//$messages = [
 			//	'type' => 'text',
