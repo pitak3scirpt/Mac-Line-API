@@ -4,6 +4,15 @@ $proxyauth = 'fixie:ncIwXPyhNi4cEWL';
 
 $access_token = 'TuPeAEFb91uGz4kPxjnMeZ6QaAGrLK05ZQcO5P1zdTNr3bYhATznR5S9ef2Xr/7uNFmngRzqMu+xPUsXw3u53QOwzy2SP+RsQsMVxP6G7VxEff/5I7k0t+SrazH97wQpwxIblRSY7FLpoTkwY0l5hQdB04t89/1O/w1cDnyilFU=';
 
+// Function Return message
+function t1($tt1)
+{
+	$messages = [
+		'type' => 'text',
+		'text' => $tt1
+		];
+	return $messages;
+}
 // Get POST body content
 $content = file_get_contents('php://input');
 //$content = iconv(mb_detect_encoding($content, mb_detect_order(), true), "UTF-8", $content);
@@ -168,10 +177,7 @@ if (!is_null($events['events'])) {
 			switch ($tempsend) {
 				case "text" :
 					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
-					$messages = [
-						'type' => 'text',
-						'text' => $text
-					];
+					$messages = t1($text);
 					break;
 				case "image" :
 					$messages = [
