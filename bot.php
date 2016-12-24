@@ -211,7 +211,8 @@ if (!is_null($events['events'])) {
 					//$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/previewln.jpg";
 					$previewImageUrl = $originalUrl."ln/originln.jpg";
 					$lengentext = "1 ภาพ";
-					$tempsend = "im1";
+					//$tempsend = "im1";
+					$tempsend = "t1im2";
 					break;
 				case "cn":
 					$adminuser = file_get_contents("userId/admin.txt");
@@ -257,9 +258,13 @@ if (!is_null($events['events'])) {
 					break;	
 				case "t1im2" :
 					$text = $gentext."\nPlatform By Line Application";	
-					$messages = t1($text);	
-					$data = data1($replyToken,$messages);
-					//$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
+					//$messages = t1($text);	
+					//$data = data1($replyToken,$messages);
+					$originalContentUrl1 = $originalContentUrl;
+					$originalContentUrl2 = $originalContentUrl;
+					$previewImageUrl1 = $previewImageUrl;
+					$previewImageUrl2 = $previewImageUrl;
+					$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
 					break;	
 				default :
 					$text = $gentext."\n".$lengentext." Platform By Line Application";
