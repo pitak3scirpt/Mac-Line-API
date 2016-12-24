@@ -19,6 +19,29 @@ function im1($originalContentUrl,$previewImageUrl)
 	return $messages;
 }
 // Function Return data
+function t1im2($replyToken,$tt1,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2)
+{
+	$messages = [
+		'type' => 'text',
+		'text' => $tt1
+		];
+	$image1 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl1 ,
+		'previewImageUrl' => $previewImageUrl1
+	];
+	$image2 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl2 ,
+		'previewImageUrl' => $previewImageUrl2
+	];
+	$data = [
+		'replyToken' => $replyToken,
+		'messages' => [$messages,$image1,$image2]
+		];	
+	return $data;
+}
+// Function Return data
 function data1($replyToken,$messages)
 {
 	$data = [
@@ -122,8 +145,44 @@ if (!is_null($events['events'])) {
 			$lentext = strlen($text);
 			$cut2headtext = substr($text,0,2);
 			
-			// Equipment Select tx, ln, sp
+			// Equipment Select sb, tx, ln, sp			
 			switch ($cut2headtext) {
+				cast "sb":
+					$cut3midtext = substr($text,3,3);		
+					$cut3midtext = trim($cut3midtext);
+					$bsubname = false;
+					if ($cut3midtext == "bk") or ($cut3midtext == "bn"){
+						$bsubname = true;
+						$cut3midtext = "bk";
+					}
+					if ($lentext > 9) {
+						$cut3lastext = substr($text,7,3);
+						$cut3lastext = trim($cut3lastext);
+					} elseif (strlen($cut3midtext) <3) {
+						$cut3lastext = substr($text,6,3);
+						$cut3lastext = trim($cut3lastext);					
+					} else {
+						$cut3lastext = substr($text,7,3);
+						$cut3lastext = trim($cut3lastext);
+					}
+					$bcode = false;
+					if ($cut3lastext == "inf") or ($cut3lastext == "con"){
+						$bcode = true;
+					}
+					// Find txt data name
+					if ($bsubname == true) or ($bcode == true){
+						$gentext = "Switching & Single Line Diagram สฟ.".$cut3midtext;
+						$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
+						$previewImageUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
+						$originalContentUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";
+						$previewImageUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";		
+						$lengentext = "1 ข้อความ, 2 ภาพ";
+						$tempsend = "t1im2";
+					} else {
+						$gentext = "คำขอของท่านไม่ถูกต้อง";
+						$tempsend = "t1"
+					}
+					break;
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
@@ -148,9 +207,9 @@ if (!is_null($events['events'])) {
 					break;
 				case "ln":
 					$gentext = "Line";
-					$originalContentUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg";
+					$originalContentUrl = $originalUrl."ln/originln.jpg";
 					//$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/previewln.jpg";
-					$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/originln.jpg";
+					$previewImageUrl = $originalUrl."ln/originln.jpg";
 					$lengentext = "1 ภาพ";
 					$tempsend = "im1";
 					break;
@@ -190,16 +249,20 @@ if (!is_null($events['events'])) {
 				case "t1" :
 					$text = $gentext."\nPlatform By Line Application"."\n";
 					$messages = t1($text);
-					//$data = data1($replyToken,$messages);
+					$data = data1($replyToken,$messages);
 					break;
 				case "im1" :
 					$messages = im1($originalContentUrl,$previewImageUrl);
-					//$data = data1($replyToken,$messages);
-					break;					
+					$data = data1($replyToken,$messages);
+					break;	
+				case "t1im2" :
+					$text = $gentext."\nPlatform By Line Application"."\n";
+					$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
+					break;	
 				default :
 					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
 					$messages = t1($text);	
-					//$data = data1($replyToken,$messages);
+					$data = data1($replyToken,$messages);
 			}
 			//$messages = [
 			//	'type' => 'text',
@@ -213,7 +276,7 @@ if (!is_null($events['events'])) {
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = data1($replyToken,$messages);
+			//$data = data1($replyToken,$messages);
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
