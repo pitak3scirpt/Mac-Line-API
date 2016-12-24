@@ -171,7 +171,7 @@ if (!is_null($events['events'])) {
 					}
 					// Find txt data name
 					if ($bsubname == true) or ($bcode == true){
-						$gentext = "Switching & Single Line Diagram สฟ.".$cut3midtext;
+						$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
 						$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$previewImageUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$originalContentUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";
