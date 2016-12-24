@@ -147,7 +147,7 @@ if (!is_null($events['events'])) {
 			
 			// Equipment Select sb, tx, ln, sp			
 			switch ($cut2headtext) {
-				cast "sb":
+				case "sb":
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bsubname = false;
