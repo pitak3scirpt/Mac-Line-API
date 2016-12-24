@@ -1,0 +1,17 @@
+1. กรณี N-1 สายส่ง 230 kV BK-RPS ทำให้สายส่งวงจรที่เหลือมีโอกาส Overload เกิน 20% \n
+ข้อมูลตามแผนการเดินเครื่อง ณ เดือนธันวาคม 2559 \n
+หมายเหตุ: พิจารณาจาก MCC Req. 9,486 MW \n
+\n
+แนวทางการแก้ไข ควรเดินเครื่องโรงไฟฟ้าที่เกี่ยวข้อง ดังนี้ \n
+\n
+กรณี รฟ. NB-S2 เดินเครื่อง และ รฟ. WN-C1, 3 ไม่เดินเครื่อง \n
+- NB-S2        > 800 MW      \n
+- WN-Bus B  > 0 MW : WN-C1, C3 \n
+- SB-Bus A, B > 1,150 MW: SB-C2, C3 (SB-T4, T5 เป็น Emergency Standby Mode) \n
+- BPK-Bus A  > 1,100 MW  : BPK-C5, T1 (BPK-T1, T2 เป็น Emergency Standby Mode) \n
+\n
+กรณี รฟ. NB-S2 ไม่เดินเครื่อง และ รฟ. WN-C1, 3 เดินเครื่อง \n
+- NB-S2        > 0 MW      \n
+- WN-Bus B  > 600 MW : WN-C1, C3 \n
+- SB-Bus A, B > 1,150 MW: SB-C2, C3 (SB-T4, T5 เป็น Emergency Standby Mode) \n
+- BPK-Bus A  > 1,200 MW  : BPK-C5, T1 (BPK-T1, T2 เป็น Emergency Standby Mode) \n
