@@ -165,25 +165,25 @@ if (!is_null($events['events'])) {
 						$cut3lastext = substr($text,7,3);
 						$cut3lastext = trim($cut3lastext);
 					}
-					/*$bcode = false;
+					$bcode = false;
 					if (($cut3lastext == "inf") or ($cut3lastext == "con")) {
 						$bcode = true;
 					}
 					// Find txt data name
 					if ($bsubname) and ($bcode) {
 						$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
-						$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
+						/*$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$previewImageUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$originalContentUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";
-						$previewImageUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";		
+						$previewImageUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";*/		
 						$lengentext = "1 ข้อความ, 2 ภาพ";
-						$tempsend = "t1im2";
+						$tempsend = "t1";
 					} else {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
 						$tempsend = "t1";
 					}*/	
-					$gentext = "คำขอของท่านไม่ถูกต้อง";
-					$tempsend = "t1";
+					//$gentext = "คำขอของท่านไม่ถูกต้อง";
+					//$tempsend = "t1";
 					break;
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
