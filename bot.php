@@ -15,7 +15,7 @@ function im1($originalContentUrl,$previewImageUrl)
 		'type' => 'image',
 		'originalContentUrl' => $originalContentUrl ,
 		'previewImageUrl' => $previewImageUrl
-	];
+		];
 	return $messages;
 }
 // Function Return data
@@ -29,12 +29,12 @@ function t1im2($replyToken,$tt1,$originalContentUrl1,$previewImageUrl1,$original
 		'type' => 'image',
 		'originalContentUrl' => $originalContentUrl1 ,
 		'previewImageUrl' => $previewImageUrl1
-	];
+		];
 	$image2 = [
 		'type' => 'image',
 		'originalContentUrl' => $originalContentUrl2 ,
 		'previewImageUrl' => $previewImageUrl2
-	];
+		];
 	$data = [
 		'replyToken' => $replyToken,
 		'messages' => [$messages,$image1,$image2]
@@ -151,7 +151,7 @@ if (!is_null($events['events'])) {
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bsubname = false;
-					if ($cut3midtext == "bk") or ($cut3midtext == "bn"){
+					if (($cut3midtext == "bk") or ($cut3midtext == "bn")) {
 						$bsubname = true;
 						$cut3midtext = "bk";
 					}
@@ -166,11 +166,11 @@ if (!is_null($events['events'])) {
 						$cut3lastext = trim($cut3lastext);
 					}
 					$bcode = false;
-					if ($cut3lastext == "inf") or ($cut3lastext == "con"){
+					if (($cut3lastext == "inf") or ($cut3lastext == "con")) {
 						$bcode = true;
 					}
 					// Find txt data name
-					if ($bsubname == true) or ($bcode == true){
+					if ($bsubname == true) or ($bcode == true) {
 						$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
 						$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$previewImageUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
