@@ -147,11 +147,11 @@ if (!is_null($events['events'])) {
 			
 			// Equipment Select sb, tx, ln, sp			
 			switch ($cut2headtext) {
-				/*case "sb":
+				case "sb":
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bsubname = false;
-					if (($cut3midtext == "bk") or ($cut3midtext == "bn")) {
+					/*if (($cut3midtext == "bk") or ($cut3midtext == "bn")) {
 						$bsubname = true;
 						$cut3midtext = "bk";
 					}
@@ -181,8 +181,10 @@ if (!is_null($events['events'])) {
 					} else {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
 						$tempsend = "t1"
-					}
-					break;*/
+					}*/
+					$gentext = "คำขอของท่านไม่ถูกต้อง";
+					$tempsend = "t1"					
+					break;
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
