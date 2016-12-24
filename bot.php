@@ -176,7 +176,7 @@ if (!is_null($events['events'])) {
 						$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$previewImageUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$originalContentUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";
-						$previewImageUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";*/		
+						$previewImageUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";	
 						$lengentext = "1 ข้อความ, 2 ภาพ";
 						$tempsend = "t1im2";
 					//} else {
