@@ -151,7 +151,7 @@ if (!is_null($events['events'])) {
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bsubname = false;
-					/*if (($cut3midtext == "bk") or ($cut3midtext == "bn")) {
+					if (($cut3midtext == "bk") or ($cut3midtext == "bn")) {
 						$bsubname = true;
 						$cut3midtext = "bk";
 					}
@@ -180,10 +180,8 @@ if (!is_null($events['events'])) {
 						$tempsend = "t1im2";
 					} else {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
-						$tempsend = "t1"
-					}*/
-					$gentext = "คำขอของท่านไม่ถูกต้อง";
-					$tempsend = "t1"					
+						$tempsend = "t1";
+					}				
 					break;
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
@@ -213,8 +211,8 @@ if (!is_null($events['events'])) {
 					//$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/previewln.jpg";
 					$previewImageUrl = $originalUrl."ln/originln.jpg";
 					$lengentext = "1 ภาพ";
-					//$tempsend = "im1";
-					$tempsend = "t1im2";
+					$tempsend = "im1";
+					//$tempsend = "t1im2";
 					break;
 				case "cn":
 					$adminuser = file_get_contents("userId/admin.txt");
