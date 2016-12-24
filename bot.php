@@ -170,7 +170,7 @@ if (!is_null($events['events'])) {
 						$bcode = true;
 					}
 					// Find txt data name
-					if (($bsubname) and ($bcode)) {
+					//if (($bsubname) and ($bcode)) {
 						//$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
 						$gentext = "Switching และ Single Line Diagram สฟ ";
 						/*$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
@@ -179,10 +179,10 @@ if (!is_null($events['events'])) {
 						$previewImageUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";*/		
 						$lengentext = "1 ข้อความ, 2 ภาพ";
 						$tempsend = "t1";
-					} else {
-						$gentext = "คำขอของท่านไม่ถูกต้อง";
-						$tempsend = "t1";
-					}*/	
+					//} else {
+					//	$gentext = "คำขอของท่านไม่ถูกต้อง";
+					//	$tempsend = "t1";
+					//}*/	
 					//$gentext = "คำขอของท่านไม่ถูกต้อง";
 					//$tempsend = "t1";
 					break;
