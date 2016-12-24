@@ -147,7 +147,7 @@ if (!is_null($events['events'])) {
 			
 			// Equipment Select sb, tx, ln, sp			
 			switch ($cut2headtext) {
-				case "sb":
+				/*case "sb":
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bsubname = false;
@@ -182,7 +182,7 @@ if (!is_null($events['events'])) {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
 						$tempsend = "t1"
 					}
-					break;
+					break;*/
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
@@ -247,7 +247,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			switch ($tempsend) {
 				case "t1" :
-					$text = $gentext."\nPlatform By Line Application"."\n";
+					$text = $gentext."\nPlatform By Line Application";
 					$messages = t1($text);
 					$data = data1($replyToken,$messages);
 					break;
@@ -256,13 +256,13 @@ if (!is_null($events['events'])) {
 					$data = data1($replyToken,$messages);
 					break;	
 				case "t1im2" :
-					$text = $gentext."\nPlatform By Line Application"."\n";	
+					$text = $gentext."\nPlatform By Line Application";	
 					$messages = t1($text);	
 					$data = data1($replyToken,$messages);
 					//$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
 					break;	
 				default :
-					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
+					$text = $gentext."\n".$lengentext." Platform By Line Application";
 					$messages = t1($text);	
 					$data = data1($replyToken,$messages);
 			}
