@@ -151,7 +151,7 @@ if (!is_null($events['events'])) {
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bsubname = false;
-					if (($cut3midtext == "bk") or ($cut3midtext == "bn")) {
+					if (($cut3midtext == "bk") or ($cut3midtext == "bn") or ($cut3midtext == "bpl") or ($cut3midtext == "chw") or ($cut3midtext == "lpr") or ($cut3midtext == "lla") or ($cut3midtext == "nb") or ($cut3midtext == "nco") or ($cut3midtext == "nv") or ($cut3midtext == "on") or ($cut3midtext == "rps") or ($cut3midtext == "rs") or ($cut3midtext == "sb") or ($cut3midtext == "sno") or ($cut3midtext == "stb") or ($cut3midtext == "tpr")) {
 						$bsubname = true;
 						$cut3midtext = "bk";
 					}
