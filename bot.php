@@ -170,9 +170,9 @@ if (!is_null($events['events'])) {
 						$bcode = true;
 					}
 					// Find txt data name
-					if ($bsubname) and ($bcode) {
+					if (($bsubname) and ($bcode)) {
 						//$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
-						$gentext = "Switching และ Single Line Diagram สฟ ".$cut3midtext;
+						$gentext = "Switching และ Single Line Diagram สฟ ";
 						/*$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$previewImageUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
 						$originalContentUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";
