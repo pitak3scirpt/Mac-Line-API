@@ -13,6 +13,15 @@ function t1($tt1)
 		];
 	return $messages;
 }
+// Function Return data
+function data1($replyToken,$messages)
+{
+	$data = [
+		'replyToken' => $replyToken,
+		'messages' => [$messages]
+		];
+	return $data;
+}
 // Get POST body content
 $content = file_get_contents('php://input');
 //$content = iconv(mb_detect_encoding($content, mb_detect_order(), true), "UTF-8", $content);
@@ -32,15 +41,9 @@ if (!is_null($events['events'])) {
 			// Get Replytoken
 			$replyToken = $event['replyToken'];
 			//Make a POST Request to Messaging API to reply to follower
-			$messages = [
-				'type' => 'text',
-				'text' => $gentext
-			];
+			$messages = t1($gentext);
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages]
-			];
+			$data = data1($replyToken,$messages);
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
@@ -178,6 +181,7 @@ if (!is_null($events['events'])) {
 				case "text" :
 					$text = $gentext."\n".$lengentext." Platform By Line Application"."\n";
 					$messages = t1($text);
+					//$data = data1($replyToken,$messages);
 					break;
 				case "image" :
 					$messages = [
@@ -205,10 +209,7 @@ if (!is_null($events['events'])) {
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
-			$data = [
-				'replyToken' => $replyToken,
-				'messages' => [$messages]
-			];
+			$data = data1($replyToken,$messages);
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
