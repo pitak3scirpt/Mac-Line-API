@@ -227,7 +227,7 @@ if (!is_null($events['events'])) {
 					//$gentext = "คำขอของท่านไม่ถูกต้อง";
 					//$tempsend = "t1";
 					break;
-				case "pr":					
+				/*case "pr":					
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bpriEq = false;					
@@ -273,7 +273,7 @@ if (!is_null($events['events'])) {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
 						$tempsend = "t1";
 					}
-					break;
+					break;*/
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
