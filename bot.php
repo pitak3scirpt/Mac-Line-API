@@ -227,7 +227,7 @@ if (!is_null($events['events'])) {
 					//$gentext = "คำขอของท่านไม่ถูกต้อง";
 					//$tempsend = "t1";
 					break;
-				/*case "pr":					
+				case "pr":					
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bpriEq = false;					
@@ -236,7 +236,7 @@ if (!is_null($events['events'])) {
 					}					
 					// Find txt data name
 					if ($bpriEq) {
-						switch $cut3midtext {
+						switch ($cut3midtext) {
 							case "ln":
 								$originalContentUrl1 = $priorityEqUrl."Line_Page_1.jpg";
 								$previewImageUrl1 = $priorityEqUrl."Line_Page_1.jpg";
@@ -273,7 +273,7 @@ if (!is_null($events['events'])) {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
 						$tempsend = "t1";
 					}
-					break;*/
+					break;
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
@@ -347,12 +347,12 @@ if (!is_null($events['events'])) {
 					$messages = im1($originalContentUrl,$previewImageUrl);
 					$data = data1($replyToken,$messages);
 					break;	
-				/*case "im2" :
+				case "im2" :
 					$data = im2($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
 					break;	
 				case "im3" :
 					$data = im3($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3);
-					break;	*/
+					break;	
 				case "t1im2" :
 					$text = $gentext."\nPlatform By Line Application";	
 					//$messages = t1($text);	
