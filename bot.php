@@ -19,6 +19,47 @@ function im1($originalContentUrl,$previewImageUrl)
 	return $messages;
 }
 // Function Return data
+function im2($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2)
+{
+	$image1 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl1 ,
+		'previewImageUrl' => $previewImageUrl1
+		];
+	$image2 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl2 ,
+		'previewImageUrl' => $previewImageUrl2
+		];
+	$data = [
+		'replyToken' => $replyToken,
+		'messages' => [$image1,$image2,$image3]
+		];	
+	return $data;
+}
+function im3($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3)
+{
+	$image1 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl1 ,
+		'previewImageUrl' => $previewImageUrl1
+		];
+	$image2 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl2 ,
+		'previewImageUrl' => $previewImageUrl2
+		];
+	$image3 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl3 ,
+		'previewImageUrl' => $previewImageUrl3
+		];
+	$data = [
+		'replyToken' => $replyToken,
+		'messages' => [$image1,$image2,$image3]
+		];	
+	return $data;
+}
 function t1im2($replyToken,$tt1,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2)
 {
 	$messages = [
@@ -186,6 +227,52 @@ if (!is_null($events['events'])) {
 					//$gentext = "คำขอของท่านไม่ถูกต้อง";
 					//$tempsend = "t1";
 					break;
+				case "pr":					
+					$cut3midtext = substr($text,3,3);		
+					$cut3midtext = trim($cut3midtext);
+					$bpriEq = false;					
+					if (($cut3midtext == "ln") or ($cut3midtext == "tx") or ($cut3midtext == "cb")) {
+						$bpriEq = true;
+						$cut3midtext = "ln";
+					}					
+					// Find txt data name
+					if ($bpriEq) {
+						switch $cut3midtext {
+							case "ln":
+								$originalContentUrl1 = $priorityEqUrl."Line_Page_1.jpg";
+								$previewImageUrl1 = $priorityEqUrl."Line_Page_1.jpg";
+								$originalContentUrl2 = $priorityEqUrl."Line_Page_2.jpg";
+								$previewImageUrl2 = $priorityEqUrl."Line_Page_2.jpg";
+								$lengentext = "2 ภาพ";
+								$tempsend = "im2";
+								break;
+							case "tx":
+								$originalContentUrl1 = $priorityEqUrl."Tx_Page_1.jpg";
+								$previewImageUrl1 = $priorityEqUrl."Tx_Page_1.jpg";
+								$originalContentUrl2 = $priorityEqUrl."Tx_Page_2.jpg";
+								$previewImageUrl2 = $priorityEqUrl."Tx_Page_2.jpg";
+								$originalContentUrl3 = $priorityEqUrl."Tx_Page_3.jpg";
+								$previewImageUrl3 = $priorityEqUrl."Tx_Page_3.jpg";
+								$lengentext = "3 ภาพ";
+								$tempsend = "im3";
+								break;
+							case "cb":
+								$originalContentUrl1 = $priorityEqUrl."C_Page_1.jpg";
+								$previewImageUrl1 = $priorityEqUrl."C_Page_1.jpg";
+								$originalContentUrl2 = $priorityEqUrl."C_Page_2.jpg";
+								$previewImageUrl2 = $priorityEqUrl."C_Page_2.jpg";
+								$originalContentUrl3 = $priorityEqUrl."C_Page_3.jpg";
+								$previewImageUrl3 = $priorityEqUrl."C_Page_3.jpg";
+								$lengentext = "3 ภาพ";
+								$tempsend = "im3";
+								break;																
+							default :
+						}
+					} else {
+						$gentext = "คำขอของท่านไม่ถูกต้อง";
+						$tempsend = "t1";
+					}
+					break;
 				case "tx":					
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
@@ -258,6 +345,12 @@ if (!is_null($events['events'])) {
 				case "im1" :
 					$messages = im1($originalContentUrl,$previewImageUrl);
 					$data = data1($replyToken,$messages);
+					break;	
+				case "im2" :
+					$data = im2($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
+					break;	
+				case "im3" :
+					$data = im3($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3);
 					break;	
 				case "t1im2" :
 					$text = $gentext."\nPlatform By Line Application";	
