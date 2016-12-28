@@ -33,7 +33,7 @@ function im2($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContent
 		];
 	$data = [
 		'replyToken' => $replyToken,
-		'messages' => [$image1,$image2,$image3]
+		'messages' => [$image1,$image2]
 		];	
 	return $data;
 }
@@ -233,7 +233,6 @@ if (!is_null($events['events'])) {
 					$bpriEq = false;					
 					if (($cut3midtext == "ln") or ($cut3midtext == "tx") or ($cut3midtext == "cb")) {
 						$bpriEq = true;
-						$cut3midtext = "ln";
 					}					
 					// Find txt data name
 					if ($bpriEq) {
@@ -267,6 +266,8 @@ if (!is_null($events['events'])) {
 								$tempsend = "im3";
 								break;																
 							default :
+								$gentext = "คำขอของท่านไม่ถูกต้อง";
+								$tempsend = "t1";
 						}
 					} else {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
