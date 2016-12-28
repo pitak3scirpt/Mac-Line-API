@@ -238,30 +238,30 @@ if (!is_null($events['events'])) {
 					if ($bpriEq) {
 						switch ($cut3midtext) {
 							case "ln":
-								$originalContentUrl1 = $priorityEqUrl."Line_Page_1.jpg";
-								$previewImageUrl1 = $priorityEqUrl."Line_Page_1.jpg";
-								$originalContentUrl2 = $priorityEqUrl."Line_Page_2.jpg";
-								$previewImageUrl2 = $priorityEqUrl."Line_Page_2.jpg";
+								$originalContentUrl1 = $originalUrl."priorityeq/Line_Page_1.jpg";
+								$previewImageUrl1 = $originalUrl."priorityeq/Line_Page_1.jpg";
+								$originalContentUrl2 = $originalUrl."priorityeq/Line_Page_2.jpg";
+								$previewImageUrl2 = $originalUrl."priorityeq/Line_Page_2.jpg";
 								$lengentext = "2 ภาพ";
 								$tempsend = "im2";
 								break;
 							case "tx":
-								$originalContentUrl1 = $priorityEqUrl."Tx_Page_1.jpg";
-								$previewImageUrl1 = $priorityEqUrl."Tx_Page_1.jpg";
-								$originalContentUrl2 = $priorityEqUrl."Tx_Page_2.jpg";
-								$previewImageUrl2 = $priorityEqUrl."Tx_Page_2.jpg";
-								$originalContentUrl3 = $priorityEqUrl."Tx_Page_3.jpg";
-								$previewImageUrl3 = $priorityEqUrl."Tx_Page_3.jpg";
+								$originalContentUrl1 = $originalUrl."priorityeq/Tx_Page_1.jpg";
+								$previewImageUrl1 = $originalUrl."priorityeq/Tx_Page_1.jpg";
+								$originalContentUrl2 = $originalUrl."priorityeq/Tx_Page_2.jpg";
+								$previewImageUrl2 = $originalUrl."priorityeq/Tx_Page_2.jpg";
+								$originalContentUrl3 = $originalUrl."priorityeq/Tx_Page_3.jpg";
+								$previewImageUrl3 = $originalUrl."priorityeq/Tx_Page_3.jpg";
 								$lengentext = "3 ภาพ";
 								$tempsend = "im3";
 								break;
 							case "cb":
-								$originalContentUrl1 = $priorityEqUrl."C_Page_1.jpg";
-								$previewImageUrl1 = $priorityEqUrl."C_Page_1.jpg";
-								$originalContentUrl2 = $priorityEqUrl."C_Page_2.jpg";
-								$previewImageUrl2 = $priorityEqUrl."C_Page_2.jpg";
-								$originalContentUrl3 = $priorityEqUrl."C_Page_3.jpg";
-								$previewImageUrl3 = $priorityEqUrl."C_Page_3.jpg";
+								$originalContentUrl1 = $originalUrl."priorityeq/C_Page_1.jpg";
+								$previewImageUrl1 = $originalUrl."priorityeq/C_Page_1.jpg";
+								$originalContentUrl2 = $originalUrl."priorityeq/C_Page_2.jpg";
+								$previewImageUrl2 = $originalUrl."priorityeq/C_Page_2.jpg";
+								$originalContentUrl3 = $originalUrl."priorityeq/C_Page_3.jpg";
+								$previewImageUrl3 = $originalUrl."priorityeq/C_Page_3.jpg";
 								$lengentext = "3 ภาพ";
 								$tempsend = "im3";
 								break;																
