@@ -60,6 +60,34 @@ function im3($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContent
 		];	
 	return $data;
 }
+function im4($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3,$originalContentUrl4,$previewImageUrl4)
+{
+	$image1 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl1 ,
+		'previewImageUrl' => $previewImageUrl1
+		];
+	$image2 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl2 ,
+		'previewImageUrl' => $previewImageUrl2
+		];
+	$image3 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl3 ,
+		'previewImageUrl' => $previewImageUrl3
+		];
+	$image4 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl4 ,
+		'previewImageUrl' => $previewImageUrl4
+		];
+	$data = [
+		'replyToken' => $replyToken,
+		'messages' => [$image1,$image2,$image3,$image4]
+		];	
+	return $data;
+}
 function t1im2($replyToken,$tt1,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2)
 {
 	$messages = [
@@ -212,14 +240,18 @@ if (!is_null($events['events'])) {
 					}
 					// Find txt data name
 					if (($bsubname) and ($bcode)) {
-						$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
+						//$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
 						//$gentext = "Switching และ Single Line Diagram สฟ ";
-						$originalContentUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
-						$previewImageUrl1 = $originalUrl."sub/".$cut3midtext."/swd.jpg";
-						$originalContentUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";
-						$previewImageUrl2 = $originalUrl."sub/".$cut3midtext."/sld.jpg";	
-						$lengentext = "1 ข้อความ, 2 ภาพ";
-						$tempsend = "t1im2";
+						$originalContentUrl1 = $dataSubUrl.$cut3midtext."/swd.jpg";
+						$previewImageUrl1 = $dataSubUrl.$cut3midtext."/swd.jpg";
+						$originalContentUrl2 = $dataSubUrl.$cut3midtext."/sld.jpg";
+						$previewImageUrl2 = $dataSubUrl.$cut3midtext."/sld.jpg";
+						$originalContentUrl3 = $dataSubUrl.$cut3midtext."/con01.jpg";
+						$previewImageUrl3 = $dataSubUrl.$cut3midtext."/con01jpg";
+						$originalContentUrl4 = $dataSubUrl.$cut3midtext."/sol01.jpg";
+						$previewImageUrl4 = $dataSubUrl.$cut3midtext."/sol01.jpg";						
+						$lengentext = "4 ภาพ";
+						$tempsend = "im4";
 					} else {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
 						$tempsend = "t1";
@@ -353,6 +385,9 @@ if (!is_null($events['events'])) {
 				case "im3" :
 					$data = im3($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3);
 					break;	
+				case "im4" :
+					$data = im4($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3,$originalContentUrl4,$previewImageUrl4);
+					break;						
 				case "t1im2" :
 					$text = $gentext."\nPlatform By Line Application";	
 					//$messages = t1($text);	
