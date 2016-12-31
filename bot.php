@@ -248,7 +248,7 @@ if (!is_null($events['events'])) {
 						$originalContentUrl2 = $dataSubUrl.$cut3midtext."/sld.jpg";
 						$previewImageUrl2 = $dataSubUrl.$cut3midtext."/sld.jpg";
 						$originalContentUrl3 = $dataSubUrl.$cut3midtext."/con01.jpg";
-						$previewImageUrl3 = $dataSubUrl.$cut3midtext."/con01jpg";
+						$previewImageUrl3 = $dataSubUrl.$cut3midtext."/con01.jpg";
 						$originalContentUrl4 = $dataSubUrl.$cut3midtext."/sol01.jpg";
 						$previewImageUrl4 = $dataSubUrl.$cut3midtext."/sol01.jpg";						
 						$lengentext = "4 ภาพ";
