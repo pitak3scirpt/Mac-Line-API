@@ -88,6 +88,39 @@ function im4($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContent
 		];	
 	return $data;
 }
+function im5($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3,$originalContentUrl4,$previewImageUrl4,$originalContentUrl5,$previewImageUrl5)
+{
+	$image1 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl1 ,
+		'previewImageUrl' => $previewImageUrl1
+		];
+	$image2 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl2 ,
+		'previewImageUrl' => $previewImageUrl2
+		];
+	$image3 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl3 ,
+		'previewImageUrl' => $previewImageUrl3
+		];
+	$image4 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl4 ,
+		'previewImageUrl' => $previewImageUrl4
+		];
+	$image5 = [
+		'type' => 'image',
+		'originalContentUrl' => $originalContentUrl5 ,
+		'previewImageUrl' => $previewImageUrl5
+		];	
+	$data = [
+		'replyToken' => $replyToken,
+		'messages' => [$image1,$image2,$image3,$image4,$image5]
+		];	
+	return $data;
+}
 function t1im2($replyToken,$tt1,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2)
 {
 	$messages = [
@@ -220,9 +253,12 @@ if (!is_null($events['events'])) {
 					$cut3midtext = substr($text,3,3);		
 					$cut3midtext = trim($cut3midtext);
 					$bsubname = false;
+					$bcode = true;
 					if (($cut3midtext == "bk") or ($cut3midtext == "bn") or ($cut3midtext == "bpl") or ($cut3midtext == "chw") or ($cut3midtext == "lpr") or ($cut3midtext == "lla") or ($cut3midtext == "nb") or ($cut3midtext == "nco") or ($cut3midtext == "nv") or ($cut3midtext == "on") or ($cut3midtext == "rps") or ($cut3midtext == "rs") or ($cut3midtext == "sb") or ($cut3midtext == "sno") or ($cut3midtext == "stb") or ($cut3midtext == "tpr")) {
 						$bsubname = true;
-						$cut3midtext = "bk";
+						if (($cut3midtext == "lpr") or ($cut3midtext == "nb") or ($cut3midtext == "nv") or ($cut3midtext == "on") or ($cut3midtext == "stb")) {
+							$bcode = false;
+						}
 					}
 					/*if ($lentext > 9) {
 						$cut3lastext = substr($text,7,3);
@@ -234,25 +270,38 @@ if (!is_null($events['events'])) {
 						$cut3lastext = substr($text,7,3);
 						$cut3lastext = trim($cut3lastext);
 					}*/
-					//$bcode = false;
-					$bcode = true;
-					//if (($cut3lastext == "inf") or ($cut3lastext == "con")) {
-					//	$bcode = true;
+					//if (($cut3midtext == "lpr") or ($cut3midtext == "nb") or ($cut3midtext == "nv") or ($cut3midtext == "on") or ($cut3midtext == "stb")) {
+					//	$bcode = false;
 					//}
 					// Find txt data name
-					if (($bsubname) and ($bcode)) {
+					if (($bsubname)) {
+						if ($bcode) {
 						//$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
 						//$gentext = "Switching และ Single Line Diagram สฟ ";
-						$originalContentUrl1 = $dataSubUrl.$cut3midtext."/swd.jpg";
-						$previewImageUrl1 = $dataSubUrl.$cut3midtext."/swd.jpg";
-						$originalContentUrl2 = $dataSubUrl.$cut3midtext."/sld.jpg";
-						$previewImageUrl2 = $dataSubUrl.$cut3midtext."/sld.jpg";
-						$originalContentUrl3 = $dataSubUrl.$cut3midtext."/con01.jpg";
-						$previewImageUrl3 = $dataSubUrl.$cut3midtext."/con01.jpg";
-						$originalContentUrl4 = $dataSubUrl.$cut3midtext."/sol01.jpg";
-						$previewImageUrl4 = $dataSubUrl.$cut3midtext."/sol01.jpg";						
-						$lengentext = "4 ภาพ";
-						$tempsend = "im4";
+							$originalContentUrl1 = $dataSubUrl.$cut3midtext."/swd.jpg";
+							$previewImageUrl1 = $dataSubUrl.$cut3midtext."/swd.jpg";
+							$originalContentUrl2 = $dataSubUrl.$cut3midtext."/sld.jpg";
+							$previewImageUrl2 = $dataSubUrl.$cut3midtext."/sld.jpg";
+							$originalContentUrl3 = $dataSubUrl.$cut3midtext."/con01.jpg";
+							$previewImageUrl3 = $dataSubUrl.$cut3midtext."/con01.jpg";
+							$originalContentUrl4 = $dataSubUrl.$cut3midtext."/sol01.jpg";
+							$previewImageUrl4 = $dataSubUrl.$cut3midtext."/sol01.jpg";						
+							$lengentext = "4 ภาพ";
+							$tempsend = "im4";
+						} else {
+							$originalContentUrl1 = $dataSubUrl.$cut3midtext."/swd01.jpg";
+							$previewImageUrl1 = $dataSubUrl.$cut3midtext."/swd01.jpg";
+							$originalContentUrl2 = $dataSubUrl.$cut3midtext."/swd02.jpg";
+							$previewImageUrl2 = $dataSubUrl.$cut3midtext."/swd02.jpg";							
+							$originalContentUrl3 = $dataSubUrl.$cut3midtext."/sld.jpg";
+							$previewImageUrl3 = $dataSubUrl.$cut3midtext."/sld.jpg";
+							$originalContentUrl4 = $dataSubUrl.$cut3midtext."/con01.jpg";
+							$previewImageUrl4 = $dataSubUrl.$cut3midtext."/con01.jpg";
+							$originalContentUrl5 = $dataSubUrl.$cut3midtext."/sol01.jpg";
+							$previewImageUrl5 = $dataSubUrl.$cut3midtext."/sol01.jpg";						
+							$lengentext = "5 ภาพ";
+							$tempsend = "im5";						
+						}						
 					} else {
 						$gentext = "คำขอของท่านไม่ถูกต้อง";
 						$tempsend = "t1";
@@ -388,6 +437,9 @@ if (!is_null($events['events'])) {
 					break;	
 				case "im4" :
 					$data = im4($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3,$originalContentUrl4,$previewImageUrl4);
+					break;	
+				case "im5" :
+					$data = im5($replyToken,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2,$originalContentUrl3,$previewImageUrl3,$originalContentUrl4,$previewImageUrl4,$originalContentUrl5,$previewImageUrl5);
 					break;						
 				case "t1im2" :
 					$text = $gentext."\nPlatform By Line Application";	
