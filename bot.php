@@ -224,7 +224,7 @@ if (!is_null($events['events'])) {
 						$bsubname = true;
 						$cut3midtext = "bk";
 					}
-					if ($lentext > 9) {
+					/*if ($lentext > 9) {
 						$cut3lastext = substr($text,7,3);
 						$cut3lastext = trim($cut3lastext);
 					} elseif (strlen($cut3midtext) <3) {
@@ -233,11 +233,12 @@ if (!is_null($events['events'])) {
 					} else {
 						$cut3lastext = substr($text,7,3);
 						$cut3lastext = trim($cut3lastext);
-					}
-					$bcode = false;
-					if (($cut3lastext == "inf") or ($cut3lastext == "con")) {
-						$bcode = true;
-					}
+					}*/
+					//$bcode = false;
+					$bcode = true;
+					//if (($cut3lastext == "inf") or ($cut3lastext == "con")) {
+					//	$bcode = true;
+					//}
 					// Find txt data name
 					if (($bsubname) and ($bcode)) {
 						//$gentext = "Switching & Single Line Diagram สฟ ".$cut3midtext;
