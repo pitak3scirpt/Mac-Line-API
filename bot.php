@@ -163,7 +163,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		//Push Mail
-		if (($event['headers']['Return-Path'] == 'pitak.m@egat.co.th') {
+		/*if (($event['headers']['Return-Path'] == 'pitak.m@egat.co.th') {
   			$text = "Mail Recieve";
 			$messages = t1($text);
 			$url = 'https://api.line.me/v2/bot/message/push';
@@ -186,7 +186,7 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
-		}
+		}*/
 		    
 		// Reply only when Follow me.
 		if (($event['type'] == 'follow') or ($event['type'] == 'join')) {
