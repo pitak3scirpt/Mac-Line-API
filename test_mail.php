@@ -1,10 +1,46 @@
 <?php
-echo "test mail";
+include 'headbot.php';
+// Function Return message
+function t1($tt1)
+{
+	$messages = [
+		'type' => 'text',
+		'text' => $tt1
+		];
+	return $messages;
+}
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-if (($event['headers']['Return-Path'] == 'pitak.m@egat.co.th') {
-  echo "Mail Recieve";
-}
+
+$to = $_POST['envelope']['to'];
+$from = $_POST['envelope']['from'];
+$recipients = $_POST['envelope']['recipients'];
+$domain = $_POST['envelope']['helo_domain'];
+$remote_ip = $_POST['envelope']['remote_ip'];
+$spf_domain = $_POST['envelope']['spf']['domain'];
+$spf_result = $_POST['envelope']['spf']['result'];
+
+$text = "Mail Recieve";
+$messages = t1($text);
+$url = 'https://api.line.me/v2/bot/message/push';
+$data = [
+  'to' => 'Uf95ee3607bc3d6696b2116de202f97d3',
+	'messages' => [$messages]
+	];
+$post = json_encode($data);
+$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+$result = curl_exec($ch);
+curl_close($ch);
+echo $result . "\r\n";
 ?>
