@@ -14,15 +14,19 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 
-$to = $_POST['envelope']['to'];
-$from = $_POST['envelope']['from'];
-$recipients = $_POST['envelope']['recipients'];
-$domain = $_POST['envelope']['helo_domain'];
-$remote_ip = $_POST['envelope']['remote_ip'];
-$spf_domain = $_POST['envelope']['spf']['domain'];
-$spf_result = $_POST['envelope']['spf']['result'];
+//Headers
+$subject = $_POST['headers']['Subject'];
+$to = $_POST['headers']['To'];
+$from = $_POST['headers']['From'];
+$received = $_POST['headers']['Received'];
+$return_path = $_POST['headers']['Return-Path'];
 
-$text = "Mail Recieve";
+//Body
+$plain = $_POST['plain'];
+$html = $_POST['html'];
+$reply = $_POST['reply_plain'];
+
+$text = "ได้รับ Mail จาก :".$from."\nหัวข้อ :".$subject."\nเนื่อหา".$html;
 $messages = t1($text);
 $url = 'https://api.line.me/v2/bot/message/push';
 $data = [
