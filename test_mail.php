@@ -27,7 +27,8 @@ $html = $_POST['html'];
 $reply = $_POST['reply_plain'];
 
 if (!empty($_POST)){
-	$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
+	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
+	$text = $plain;
 	$messages = t1($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
