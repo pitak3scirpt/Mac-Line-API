@@ -10,9 +10,9 @@ function t1($tt1)
 	return $messages;
 }
 // Get POST body content
-$content = file_get_contents('php://input');
+//$content = file_get_contents('php://input');
 // Parse JSON
-$events = json_decode($content, true);
+//$events = json_decode($content, true);
 
 //Headers
 $subject = $_POST['headers']['Subject'];
@@ -26,7 +26,7 @@ $plain = $_POST['plain'];
 $html = $_POST['html'];
 $reply = $_POST['reply_plain'];
 
-$text = "ได้รับ Mail จาก :".$from."\nหัวข้อ :".$subject."\nเนื่อหา".$html;
+$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
 $messages = t1($text);
 $url = 'https://api.line.me/v2/bot/message/push';
 $data = [
