@@ -378,6 +378,12 @@ if (!is_null($events['events'])) {
 					}
 					$tempsend = "t1";
 					break;
+				case "pk":
+					$originalContentUrl = $datapkUrl."01.jpg";
+					$previewImageUrl = $datapkUrl."01.jpg";
+					$lengentext = "1 ภาพ";
+					$tempsend = "im1";
+					break;				
 				case "ln":
 					$gentext = "Line";
 					$originalContentUrl = $originalUrl."ln/originln.jpg";
