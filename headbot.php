@@ -10,6 +10,7 @@ $access_token = 'TuPeAEFb91uGz4kPxjnMeZ6QaAGrLK05ZQcO5P1zdTNr3bYhATznR5S9ef2Xr/7
 $originalUrl = "https://pacific-scrubland-67443.herokuapp.com/";
 $dataPrEqUrl = "https://hidden-mountain-56713.herokuapp.com/priorityeq/";
 $dataSubUrl = "https://hidden-mountain-56713.herokuapp.com/sub/";
+$datapkUrl = "https://hidden-mountain-56713.herokuapp.com/peak/";
 //Test No security
 //$priorityEqUrl = "http://www.ppp066.16mb.com/priorityeq/";
 ?>
