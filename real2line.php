@@ -11,6 +11,7 @@ function t1($tt1)
 }
 
 $text = $_GET["test_msg"];
+$text = "Test";
 	
 	
 if (!is_null($text)) {
