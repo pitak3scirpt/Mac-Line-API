@@ -10,7 +10,7 @@ function t1($tt1)
 	return $messages;
 }
 
-$text = $_GET["test_msg"]
+$text = $_GET["test_msg"];
 	
 	
 if (!is_null($text)) {
