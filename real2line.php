@@ -10,7 +10,9 @@ function t1($tt1)
 	return $messages;
 }
 
-$text = $_GET["test_msg"];
+$pName = $_GET["test_msg"];
+$vName = $_GET["test_value"];
+$text = $pName." ".$vName;
 //$text = "Test";
 	
 	
