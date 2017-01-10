@@ -43,7 +43,16 @@ $val_bk_on_4_r = $_GET["val_bk_on_4_r"];
 $text = $name_bk_rps_1_w." ".$val_bk_rps_1_w."\n";
 $text = $text.$name_bk_rps_1_r." ".$val_bk_rps_1_r."\n";
 $text = $text.$name_bk_rps_2_w." ".$val_bk_rps_2_w."\n";
-$text = $text.$name_bk_rps_2_r." ".$val_bk_rps_2_r;
+$text = $text.$name_bk_rps_2_r." ".$val_bk_rps_2_r."\n";
+$text = $text.$name_bk_on_1_w." ".$val_bk_on_1_w."\n";
+$text = $text.$name_bk_on_1_r." ".$val_bk_on_1_r."\n";
+$text = $text.$name_bk_on_2_w." ".$val_bk_on_2_w."\n";
+$text = $text.$name_bk_on_2_r." ".$val_bk_on_2_r."\n";
+$text = $text.$name_bk_on_3_w." ".$val_bk_on_3_w."\n";
+$text = $text.$name_bk_on_3_r." ".$val_bk_on_3_r."\n";
+$text = $text.$name_bk_on_4_w." ".$val_bk_on_4_w."\n";
+$text = $text.$name_bk_on_4_r." ".$val_bk_on_4_r;
+
 //$text = "Test";
 	
 	
