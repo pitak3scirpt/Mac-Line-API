@@ -416,7 +416,7 @@ if (!is_null($events['events'])) {
 					//$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/previewln.jpg";
 					//$previewImageUrl = $originalUrl."ln/originln.jpg";
 					$originalContentUrl = $ecsURL;
-					$previewImageUrl = $ecsURL;
+					$previewImageUrl = $ecsPreviewURL;
 					$lengentext = "1 ภาพ";
 					$tempsend = "im1";
 					//$tempsend = "t1im2";
