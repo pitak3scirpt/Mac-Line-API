@@ -412,9 +412,11 @@ if (!is_null($events['events'])) {
 					break;				
 				case "ln":
 					$gentext = "Line";
-					$originalContentUrl = $originalUrl."ln/originln.jpg";
+					//$originalContentUrl = $originalUrl."ln/originln.jpg";
 					//$previewImageUrl = "https://pacific-scrubland-67443.herokuapp.com/ln/previewln.jpg";
-					$previewImageUrl = $originalUrl."ln/originln.jpg";
+					//$previewImageUrl = $originalUrl."ln/originln.jpg";
+					$originalContentUrl = $ecsURL;
+					$previewImageUrl = $ecsURL;
 					$lengentext = "1 ภาพ";
 					$tempsend = "im1";
 					//$tempsend = "t1im2";
