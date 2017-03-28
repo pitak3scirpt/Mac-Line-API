@@ -192,6 +192,8 @@ if (!is_null($events['events'])) {
 		if (($event['type'] == 'follow') or ($event['type'] == 'join')) {
 			// Get user follow or join me
 			$touserid = $event['source']['userId'];
+			$toroomid = $event['source']['roomId'];
+			$togroupid = $event['source']['groupId'];
 			// Gen Text Reply
 			$gentext = "ขอบคุณที่ติดตามเรา";
 			// Get Replytoken
@@ -257,6 +259,44 @@ if (!is_null($events['events'])) {
 			$result = curl_exec($ch);
 			curl_close($ch);
 
+			echo $result . "\r\n";
+			
+			// Find Group Data
+			//$url = 'https://api.line.me/v2/bot/group/'.$togroupid;
+			//$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			//$ch = curl_init($url);
+			//curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+			//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			//$result = curl_exec($ch);
+			//curl_close($ch);
+			//$events = json_decode($result, true);
+			// Make Push Messageing
+			//$displayName = $events['displayName'];
+			//$groupId = $events['groupId'];
+			//$text = $displayName." Group\n".$groupId;
+			$text = "Group\n".$togroupid;
+			$messages = [
+				'type' => 'text',
+				'text' => $text
+				//.'\nRequest '.$reqtext
+			];
+			$url = 'https://api.line.me/v2/bot/message/push';
+			$data = [
+				'to' => 'Uf95ee3607bc3d6696b2116de202f97d3',
+				'messages' => [$messages]
+			];
+			$post = json_encode($data);
+			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+			
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			$result = curl_exec($ch);
+			curl_close($ch);
 			echo $result . "\r\n";
 		}
 			
