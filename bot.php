@@ -275,7 +275,7 @@ if (!is_null($events['events'])) {
 			//$displayName = $events['displayName'];
 			//$groupId = $events['groupId'];
 			//$text = $displayName." Group\n".$groupId;
-			$text = "Group\n".$togroupid;
+			$text = "Group"."\n".$togroupid;
 			$messages = [
 				'type' => 'text',
 				'text' => $text
