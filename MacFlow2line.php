@@ -16,7 +16,7 @@ $previewImageUrl = $ecsPreviewURL;
 
 $text = $_GET["password"];
 
-if ($text="MacShare") {
+if (!is_null($text)) {
 
 	$messages = im1($originalContentUrl,$previewImageUrl);
 	$url = 'https://api.line.me/v2/bot/message/push';
