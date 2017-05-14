@@ -13,7 +13,7 @@ function im1($originalContentUrl,$previewImageUrl)
 
 $originalContentUrl = $ecsURL;
 $previewImageUrl = $ecsPreviewURL;
-
+$text = $_GET["password"];
 $text = "password";
 
 if (!is_null($text)) {
