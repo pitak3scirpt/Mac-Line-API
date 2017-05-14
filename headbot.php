@@ -22,4 +22,7 @@ $ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?f
 //MacShare
 //$ecsURL = "https://ecs.egat.co.th/public.php?service=files&t=9d01e0a220d6e1782d7eeff4adecd57e&Mac_Power.jpg"
 //$ecsPreviewURL = "https://ecs.egat.co.th/public.php?service=files&t=972c3f2969ba8fb99d8a55bbaf9f804d&Mac_PowerPreview.jpg"
+
+//$ecsURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=maod_macc%2FMACShare%2FMac_Power.jpg"
+//$ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=maod_macc%2FMACShare%2FMac_PowerPreview.JPG"
 ?>
