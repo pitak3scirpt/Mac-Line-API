@@ -24,8 +24,8 @@ $datapkUrl = "https://hidden-mountain-56713.herokuapp.com/peak/";
 //$priorityEqUrl = "http://www.ppp066.16mb.com/priorityeq/";
 
 //MacShare
-$ecsURL = "https://ecs.egat.co.th/public.php?service=files&t=fd20b4335410e38c017713bd6d458deb&Mac_Power.jpg";
-$ecsPreviewURL = "https://ecs.egat.co.th/public.php?service=files&t=fd20b4335410e38c017713bd6d458deb&Mac_PowerPreview.jpg";
+$ecsURL = "https://ecs.egat.co.th/public.php?service=gallery&t=fd20b4335410e38c017713bd6d458deb#fd20b4335410e38c017713bd6d458deb/Mac_Power.jpg";
+$ecsPreviewURL = "https://ecs.egat.co.th/public.php?service=gallery&t=fd20b4335410e38c017713bd6d458deb#fd20b4335410e38c017713bd6d458deb/Mac_PowerPreview.jpg";
 
 //$ecsURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=maod_macc%2FMACShare%2FMac_Power.jpg";
 //$ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=maod_macc%2FMACShare%2FMac_PowerPreview.JPG";
