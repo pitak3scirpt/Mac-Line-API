@@ -9,8 +9,9 @@ function t1($tt1)
 		];
 	return $messages;
 }
-$strget = $_GET["strget"];
 
+$strget = $_GET["strget"];
+$strget = mb_convert_encoding($strget, 'UTF-8');
 $text = $strget;
 //$text = "Test";
 	
