@@ -11,9 +11,9 @@ function t1($tt1)
 }
 
 $strget = $_GET["strget"];
-//$content = iconv(mb_detect_encoding($content, mb_detect_order(), true), "UTF-8", $content);
+$strget = iconv(mb_detect_encoding($strget, mb_detect_order(), true), "UTF-8", $strget);
 //$strget = utf8_decode($strget)
-$strget = mb_convert_encoding($strget, 'UTF-8');
+//$strget = mb_convert_encoding($strget, 'UTF-8');
 $text = $strget;
 //$text = "Test";
 	
