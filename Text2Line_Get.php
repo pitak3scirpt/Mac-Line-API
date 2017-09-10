@@ -10,13 +10,13 @@ function t1($tt1)
 	return $messages;
 }
 
-$strget = $_GET["strget"];
+//$strget = $_GET["strget"];
 //$strget = iconv(mb_detect_encoding($strget, mb_detect_order(), true), "UTF-8", $strget);
 
 //$strget = utf8_decode($strget)
 //$strget = mb_convert_encoding($strget, 'UTF-8');
-$text = $strget;
-$text = "Test";
+//$text = $strget;
+$text = "Testเรียนได้";
 	
 	
 if (!is_null($text)) {
