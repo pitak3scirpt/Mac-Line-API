@@ -11,6 +11,7 @@ function t1($tt1)
 }
 
 $strget = $_GET["strget"];
+$strget = utf8_decode($strget)
 //$strget = mb_convert_encoding($strget, 'UTF-8');
 $text = $strget;
 //$text = "Test";
