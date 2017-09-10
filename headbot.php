@@ -15,17 +15,17 @@ $datapkUrl = "https://hidden-mountain-56713.herokuapp.com/peak/";
 //$ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=6afd971f8d42fe9fcf578194fdf912af%2F%2FMac_PowerPreview.jpg";
 
 // ecs 566586
- $ecsURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=6afd971f8d42fe9fcf578194fdf912af%2F%2FMac_Power.jpg";
+// $ecsURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=6afd971f8d42fe9fcf578194fdf912af%2F%2FMac_Power.jpg";
 //$ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=6afd971f8d42fe9fcf578194fdf912af%2F%2FMac_PowerPreview.JPG";
 // ecs 566586
- $ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=6afd971f8d42fe9fcf578194fdf912af%2F%2FMac_PowerPreview.jpg";
+// $ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=6afd971f8d42fe9fcf578194fdf912af%2F%2FMac_PowerPreview.jpg";
 
 //Test No security
 //$priorityEqUrl = "http://www.ppp066.16mb.com/priorityeq/";
 
 //MacShare
-//$ecsURL = "https://ecs.egat.co.th/public.php?service=gallery&t=fd20b4335410e38c017713bd6d458deb#fd20b4335410e38c017713bd6d458deb/Mac_Power.jpg";
-//$ecsPreviewURL = "https://ecs.egat.co.th/public.php?service=gallery&t=fd20b4335410e38c017713bd6d458deb#fd20b4335410e38c017713bd6d458deb/Mac_PowerPreview.jpg";
+$ecsURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Power.jpg";
+$ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_PowerPreview.jpg";
 
 //$ecsURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=maod_macc%2FMACShare%2FMac_Power.jpg";
 //$ecsPreviewURL = "https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=maod_macc%2FMACShare%2FMac_PowerPreview.JPG";
