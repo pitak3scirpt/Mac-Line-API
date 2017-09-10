@@ -10,8 +10,8 @@ function t1($tt1)
 	return $messages;
 }
 
-//$text = $text.$name_bk_on_4_r." ".$val_bk_on_4_r;
-$text = "Test";
+$text = $_GET["strget"];
+//$text = "Test";
 	
 	
 if (!is_null($text)) {
