@@ -9,8 +9,42 @@ function t1($tt1)
 		];
 	return $messages;
 }
-
-//$text = $_GET["strget"];
+$name_bk_rps_1_w = $_GET["name_bk_rps_1_w"];
+$val_bk_rps_1_w = $_GET["val_bk_rps_1_w"];
+$name_bk_rps_1_r = $_GET["name_bk_rps_1_r"];
+$val_bk_rps_1_r = $_GET["val_bk_rps_1_r"];
+$name_bk_rps_2_w = $_GET["name_bk_rps_2_w"];
+$val_bk_rps_2_w = $_GET["val_bk_rps_2_w"];
+$name_bk_rps_2_r = $_GET["name_bk_rps_2_r"];
+$val_bk_rps_2_r = $_GET["val_bk_rps_2_r"];
+$name_bk_on_1_w = $_GET["name_bk_on_1_w"];
+$val_bk_on_1_w = $_GET["val_bk_on_1_w"];
+$name_bk_on_1_r = $_GET["name_bk_on_1_r"];
+$val_bk_on_1_r = $_GET["val_bk_on_1_r"];
+$name_bk_on_2_w = $_GET["name_bk_on_2_w"];
+$val_bk_on_2_w = $_GET["val_bk_on_2_w"];
+$name_bk_on_2_r = $_GET["name_bk_on_2_r"];
+$val_bk_on_2_r = $_GET["val_bk_on_2_r"];
+$name_bk_on_3_w = $_GET["name_bk_on_3_w"];
+$val_bk_on_3_w = $_GET["val_bk_on_3_w"];
+$name_bk_on_3_r = $_GET["name_bk_on_3_r"];
+$val_bk_on_3_r = $_GET["val_bk_on_3_r"];
+$name_bk_on_4_w = $_GET["name_bk_on_4_w"];
+$val_bk_on_4_w = $_GET["val_bk_on_4_w"];
+$name_bk_on_4_r = $_GET["name_bk_on_4_r"];
+$val_bk_on_4_r = $_GET["val_bk_on_4_r"];
+$text = $name_bk_rps_1_w." ".$val_bk_rps_1_w."\n";
+$text = $text.$name_bk_rps_1_r." ".$val_bk_rps_1_r."\n";
+$text = $text.$name_bk_rps_2_w." ".$val_bk_rps_2_w."\n";
+$text = $text.$name_bk_rps_2_r." ".$val_bk_rps_2_r."\n";
+$text = $text.$name_bk_on_1_w." ".$val_bk_on_1_w."\n";
+$text = $text.$name_bk_on_1_r." ".$val_bk_on_1_r."\n";
+$text = $text.$name_bk_on_2_w." ".$val_bk_on_2_w."\n";
+$text = $text.$name_bk_on_2_r." ".$val_bk_on_2_r."\n";
+$text = $text.$name_bk_on_3_w." ".$val_bk_on_3_w."\n";
+$text = $text.$name_bk_on_3_r." ".$val_bk_on_3_r."\n";
+$text = $text.$name_bk_on_4_w." ".$val_bk_on_4_w."\n";
+$text = $text.$name_bk_on_4_r." ".$val_bk_on_4_r;
 $text = "Test";
 	
 	
