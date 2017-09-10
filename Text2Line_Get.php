@@ -10,7 +10,7 @@ function t1($tt1)
 	return $messages;
 }
 
-$text = $_GET["strget"];
+//$text = $_GET["strget"];
 $text = "Test";
 	
 	
