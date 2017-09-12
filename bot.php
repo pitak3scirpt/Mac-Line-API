@@ -564,7 +564,7 @@ if (!is_null($events['events'])) {
 					$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
 					break;
 				case "template1" :
-					$date = template1($replyToken,$gentext)
+					$date = template1($replyToken,$gentext);
 				default :
 					$text = $gentext."\n".$lengentext." Platform By Line Application";
 					$messages = t1($text);	
