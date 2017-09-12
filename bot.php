@@ -164,7 +164,7 @@ function template1($replyToken,$tt1)
 			'title' => 'Menu',
 			'text' => 'Please Select'
 			'action' => [$temp1,$temp2]
-			]
+			];
 		];
 	$data = [
 		'replyToken' => $replyToken,
