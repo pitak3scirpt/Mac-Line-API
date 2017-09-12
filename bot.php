@@ -145,6 +145,12 @@ function t1im2($replyToken,$tt1,$originalContentUrl1,$previewImageUrl1,$original
 }
 function template1($replyToken,$tt1)
 {
+	$type1 = [
+		'type' => 'template'
+		];
+	$altText1 = [
+		'altText' => 'this is a buttons template',
+		];	
 	$temp1 = [
 		'type' => 'postback',
 		'label' => 'Buy' ,
@@ -154,18 +160,15 @@ function template1($replyToken,$tt1)
 		'type' => 'postback',
 		'label' => 'Add to Cart' ,
 		'data' => 'action=add&itemid=123'
-		];	
-	$messages = [
-		'type' => 'template',
-		'altText' => 'this is a buttons template',
-		'template' => [
+		];
+	$template123 = [
 			'type' => 'buttons',
 			//'thumbnailImageUrl' => 'https://...
 			'title' => 'Menu',
 			'text' => 'Please Select'
 			'action' => [$temp1,$temp2]
-			];
-		];
+		];	
+	$messages = [$type1,$altText1,$template123];
 	$data = [
 		'replyToken' => $replyToken,
 		'messages' => [$messages]
