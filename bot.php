@@ -565,6 +565,7 @@ if (!is_null($events['events'])) {
 					break;
 				case "template1" :
 					$date = template1($replyToken,$gentext);
+					break;
 				default :
 					$text = $gentext."\n".$lengentext." Platform By Line Application";
 					$messages = t1($text);	
