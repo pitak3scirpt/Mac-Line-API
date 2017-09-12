@@ -143,38 +143,6 @@ function t1im2($replyToken,$tt1,$originalContentUrl1,$previewImageUrl1,$original
 		];	
 	return $data;
 }
-function template1($replyToken,$tt1)
-{
-	$type1 = [
-		'type' => 'template'
-		];
-	$altText1 = [
-		'altText' => 'this is a buttons template',
-		];	
-	$temp1 = [
-		'type' => 'postback',
-		'label' => 'Buy' ,
-		'data' => 'action=buy&itemid=123'
-		];
-	$temp2 = [
-		'type' => 'postback',
-		'label' => 'Add to Cart' ,
-		'data' => 'action=add&itemid=123'
-		];
-	$template123 = [
-			'type' => 'buttons',
-			//'thumbnailImageUrl' => 'https://...
-			'title' => 'Menu',
-			'text' => 'Please Select'
-			'action' => [$temp1,$temp2]
-		];	
-	$messages = [$type1,$altText1,$template123];
-	$data = [
-		'replyToken' => $replyToken,
-		'messages' => [$messages]
-		];	
-	return $data;	
-}
 // Function Return data
 function data1($replyToken,$messages)
 {
@@ -495,10 +463,6 @@ if (!is_null($events['events'])) {
 					$tempsend = "im1";
 					//$tempsend = "t1im2";
 					break;
-				case "box":
-					$gentext = "Line";
-					$tempsend = "template1";
-					break;
 				case "cn":
 					$adminuser = file_get_contents("userId/admin.txt");
 					$ttouserid = trim($touserid);
@@ -562,9 +526,6 @@ if (!is_null($events['events'])) {
 					//$previewImageUrl1 = $previewImageUrl;
 					//$previewImageUrl2 = $previewImageUrl;
 					$data = t1im2($replyToken,$text,$originalContentUrl1,$previewImageUrl1,$originalContentUrl2,$previewImageUrl2);
-					break;
-				case "template1" :
-					$date = template1($replyToken,$gentext);
 					break;
 				default :
 					$text = $gentext."\n".$lengentext." Platform By Line Application";
