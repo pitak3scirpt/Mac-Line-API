@@ -15,7 +15,7 @@ function temp2op($tt1)
 {
 	$act1 = [
 		'type' => 'postback',
-		'lable' => 'Buy',
+		'label' => 'Buy',
 		'data' => 'action=buy&itemid=123'	
 		];
 	$messages = [
