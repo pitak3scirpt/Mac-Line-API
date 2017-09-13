@@ -90,7 +90,7 @@ function temp2caro($tt1)
 		'altText' => 'MAC Substation',
 		'template' => [
 			'type' => 'carousel',
-			'actions' => [$col1,$col1]
+			'columns' => [$col1,$col1]
 			]
 		];
 	return $messages;
