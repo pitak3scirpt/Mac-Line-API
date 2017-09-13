@@ -26,7 +26,7 @@ function temp2op($tt1)
 			//'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Power.jpg',
 			'title' => 'Menu',
 			'text' => 'Please Select',
-			'actions' => $act1
+			'actions' => [$act1]
 			]
 		];
 	return $messages;
