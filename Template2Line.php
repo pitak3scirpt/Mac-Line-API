@@ -61,6 +61,41 @@ function temp2comf($tt1)
 	return $messages;
 }
 
+function temp2caro($tt1)
+{
+	$col1_1 = [
+		'type' => 'postback',
+		'label' => 'BK',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col1_2 = [
+		'type' => 'postback',
+		'label' => 'BN',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col1_3 = [
+		'type' => 'postback',
+		'label' => 'BPL',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col1 = [
+		'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Share_Menu.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription'
+		'actions' => [$col1_1,$col1_2,$col1_3]
+		];
+	
+	$messages = [
+		'type' => 'template',
+		'altText' => 'MAC Substation',
+		'template' => [
+			'type' => 'carousel',
+			'actions' => [$col1,$col1]
+			]
+		];
+	return $messages;
+}
+
 
 $text = "TestTest";
 	
@@ -70,7 +105,8 @@ if (!is_null($text)) {
 	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
 	//$messages = t1($text);
 	//$messages = temp2butt($text);
-	$messages = temp2comf($text);
+	//$messages = temp2comf($text);
+	$messages = temp2caro($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		'to' => 'Cff6b78bc839c9f764ffff0f066606681',
