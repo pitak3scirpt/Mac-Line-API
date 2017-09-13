@@ -21,7 +21,7 @@ function temp2op($tt1)
 	$messages = [
 		'type' => 'template',
 		'altText' => 'this is a buttons template',
-		'template => [
+		'template' => [
 			'type' => 'buttons',
 			'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Power.jpg',
 			'title' => 'Menu',
