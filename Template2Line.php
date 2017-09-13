@@ -189,6 +189,40 @@ function temp2caro($tt1)
 	return $messages;
 }
 
+function temp2imgcol($tt1)
+{
+	$col1_act = [
+		'type' => 'postback',
+		'label' => 'MAC Power Flow',
+		'data' => 'action=buy&itemid=111'	
+	$col1 = [
+		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_1.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'actions' => $col1_act
+		];
+		
+	$col2_act = [
+		'type' => 'postback',
+		'label' => 'Substation Walk Around',
+		'data' => 'action=buy&itemid=111'	
+	$col2 = [
+		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_2.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'actions' => $col2_act
+		];	
+		
+	$messages = [
+		'type' => 'template',
+		'altText' => 'MAC Share Menu',
+		'template' => [
+			'type' => 'image_carousel',
+			'columns' => [$col1,$col2,$col1,$col2,$col1]
+			]
+		];
+	return $messages;
+}
 
 $text = "TestTest";
 	
@@ -199,7 +233,8 @@ if (!is_null($text)) {
 	//$messages = t1($text);
 	//$messages = temp2butt($text);
 	//$messages = temp2comf($text);
-	$messages = temp2caro($text);
+	//$messages = temp2caro($text);
+	$messages = temp2imgcol($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		'to' => 'Cff6b78bc839c9f764ffff0f066606681',
