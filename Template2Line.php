@@ -11,7 +11,7 @@ function t1($tt1)
 	return $messages;
 }
 
-function temp2op($tt1)
+function temp2butt($tt1)
 {
 	$act1 = [
 		'type' => 'postback',
@@ -37,6 +37,31 @@ function temp2op($tt1)
 	return $messages;
 }
 
+function temp2comf($tt1)
+{
+	$act1 = [
+		'type' => 'message',
+		'label' => 'Yes',
+		'text' => 'Yes'	
+		];
+	$act1 = [
+		'type' => 'message',
+		'label' => 'No',
+		'text' => 'No'	
+		];	
+	$messages = [
+		'type' => 'template',
+		'altText' => 'MAC Share Comfirm',
+		'template' => [
+			'type' => 'confirm',
+			'text' => 'คุณต้องการลบข้อมูล',
+			'actions' => [$act1,$act2]
+			]
+		];
+	return $messages;
+}
+
+
 $text = "TestTest";
 	
 	
@@ -44,7 +69,8 @@ if (!is_null($text)) {
 //if (!empty($_POST)){
 	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
 	//$messages = t1($text);
-	$messages = temp2op($text);
+	//$messages = temp2butt($text);
+	$messages = temp2comf($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		'to' => 'Cff6b78bc839c9f764ffff0f066606681',
