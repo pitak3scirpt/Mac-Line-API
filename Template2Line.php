@@ -193,7 +193,7 @@ function temp2imgcol($tt1)
 {
 	$col1_act = [
 		'type' => 'postback',
-		'label' => 'MAC Power Flow',
+		'label' => 'Flow',
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col1 = [
@@ -205,7 +205,7 @@ function temp2imgcol($tt1)
 		
 	$col2_act = [
 		'type' => 'postback',
-		'label' => 'Substation Walk Around',
+		'label' => 'Walk',
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col2 = [
