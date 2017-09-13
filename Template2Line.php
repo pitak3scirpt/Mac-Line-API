@@ -44,7 +44,7 @@ function temp2comf($tt1)
 		'label' => 'Yes',
 		'text' => 'yes'	
 		];
-	$act1 = [
+	$act2 = [
 		'type' => 'message',
 		'label' => 'No',
 		'text' => 'no'	
