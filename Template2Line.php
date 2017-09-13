@@ -200,7 +200,7 @@ function temp2imgcol($tt1)
 		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_1.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
-		'actions' => $col1_act
+		'action' => $col1_act
 		];
 		
 	$col2_act = [
@@ -212,7 +212,7 @@ function temp2imgcol($tt1)
 		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_2.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
-		'actions' => $col2_act
+		'action' => $col2_act
 		];	
 		
 	$messages = [
