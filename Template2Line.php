@@ -23,7 +23,7 @@ function temp2op($tt1)
 		'altText' => 'this is a buttons template',
 		'template' => [
 			'type' => 'buttons',
-			'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Power.jpg',
+			//'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Power.jpg',
 			'title' => 'Menu',
 			'text' => 'Please Select',
 			'actions' => [$act1,$act1]
