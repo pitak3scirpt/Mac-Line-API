@@ -15,18 +15,23 @@ function temp2op($tt1)
 {
 	$act1 = [
 		'type' => 'postback',
-		'label' => 'Buy',
+		'label' => 'Power Flow',
 		'data' => 'action=buy&itemid=123'	
 		];
+	$act2 = [
+		'type' => 'postback',
+		'label' => 'Walk Around - Sub',
+		'data' => 'action=buy&itemid=123'	
+		];	
 	$messages = [
 		'type' => 'template',
 		'altText' => 'this is a buttons template',
 		'template' => [
 			'type' => 'buttons',
-			//'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Power.jpg',
+			'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Share_Menu.jpg',
 			'title' => 'Menu',
 			'text' => 'Please Select',
-			'actions' => [$act1]
+			'actions' => [$act1,$act2]
 			]
 		];
 	return $messages;
