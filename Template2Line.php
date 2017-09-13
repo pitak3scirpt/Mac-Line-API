@@ -193,7 +193,7 @@ function temp2imgcol($tt1)
 {
 	$col1_act = [
 		'type' => 'postback',
-		'label' => 'Flow',
+		'label' => 'Power Flow',
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col1 = [
@@ -205,7 +205,7 @@ function temp2imgcol($tt1)
 		
 	$col2_act = [
 		'type' => 'postback',
-		'label' => 'Walk',
+		'label' => 'Walk Around',
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col2 = [
@@ -214,13 +214,49 @@ function temp2imgcol($tt1)
 		'text' => 'Discription',
 		'action' => $col2_act
 		];	
-		
+
+	$col3_act = [
+		'type' => 'postback',
+		'label' => 'Contigency',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col3 = [
+		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_3.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'action' => $col3_act
+		];		
+	
+	$col4_act = [
+		'type' => 'postback',
+		'label' => 'Record',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col4 = [
+		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_4.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'action' => $col4_act
+		];
+	
+	$col5_act = [
+		'type' => 'postback',
+		'label' => 'Record',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col5 = [
+		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_5.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'action' => $col5_act
+		];	
+	
 	$messages = [
 		'type' => 'template',
 		'altText' => 'MAC Share Menu',
 		'template' => [
 			'type' => 'image_carousel',
-			'columns' => [$col1,$col2,$col1,$col2,$col1]
+			'columns' => [$col1,$col2,$col3,$col4,$col5]
 			]
 		];
 	return $messages;
