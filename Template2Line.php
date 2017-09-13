@@ -63,6 +63,7 @@ function temp2comf($tt1)
 
 function temp2caro($tt1)
 {
+	//Column 1
 	$col1_1 = [
 		'type' => 'postback',
 		'label' => 'BK',
@@ -85,12 +86,104 @@ function temp2caro($tt1)
 		'actions' => [$col1_1,$col1_2,$col1_3]
 		];
 	
+	//Column 2
+	$col2_1 = [
+		'type' => 'postback',
+		'label' => 'CHW',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col2_2 = [
+		'type' => 'postback',
+		'label' => 'LPR',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col2_3 = [
+		'type' => 'postback',
+		'label' => 'LLA',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col2 = [
+		'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Share_Menu.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'actions' => [$col2_1,$col2_2,$col2_3]
+		];
+	
+	//Column 3
+	$col3_1 = [
+		'type' => 'postback',
+		'label' => 'NB',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col3_2 = [
+		'type' => 'postback',
+		'label' => 'NCO',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col3_3 = [
+		'type' => 'postback',
+		'label' => 'NV',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col3 = [
+		'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Share_Menu.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'actions' => [$col3_1,$col3_2,$col3_3]
+		];
+	
+	//Column 4
+	$col4_1 = [
+		'type' => 'postback',
+		'label' => 'ON',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col4_2 = [
+		'type' => 'postback',
+		'label' => 'RPS',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col4_3 = [
+		'type' => 'postback',
+		'label' => 'RS',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col4 = [
+		'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Share_Menu.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'actions' => [$col4_1,$col4_2,$col4_3]
+		];
+	
+	//Column 5
+	$col5_1 = [
+		'type' => 'postback',
+		'label' => 'SB',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col5_2 = [
+		'type' => 'postback',
+		'label' => 'SNO',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col5_3 = [
+		'type' => 'postback',
+		'label' => 'STB',
+		'data' => 'action=buy&itemid=111'	
+		];
+	$col5 = [
+		'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Share_Menu.jpg',
+		'title' => 'This is menu.',
+		'text' => 'Discription',
+		'actions' => [$col5_1,$col5_2,$col5_3]
+		];
+	
 	$messages = [
 		'type' => 'template',
 		'altText' => 'MAC Substation',
 		'template' => [
 			'type' => 'carousel',
-			'columns' => [$col1,$col1]
+			'columns' => [$col1,$col2,$col3,$col4,$col5]
 			]
 		];
 	return $messages;
