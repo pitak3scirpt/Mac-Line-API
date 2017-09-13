@@ -162,7 +162,8 @@ function temp2imgcol($tt1)
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col1 = [
-		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_1.jpg',
+		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_1.jpg',
+		'imageUrl' => 'https://pacific-scrubland-67443.herokuapp.com/ColMenu_1.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
 		'action' => $col1_act
@@ -174,7 +175,8 @@ function temp2imgcol($tt1)
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col2 = [
-		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_2.jpg',
+		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_2.jpg',
+		'imageUrl' => 'https://pacific-scrubland-67443.herokuapp.com/ColMenu_2.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
 		'action' => $col2_act
@@ -185,7 +187,8 @@ function temp2imgcol($tt1)
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col3 = [
-		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_3.jpg',
+		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_3.jpg',
+		'imageUrl' => 'https://pacific-scrubland-67443.herokuapp.com/ColMenu_3.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
 		'action' => $col3_act
@@ -197,7 +200,8 @@ function temp2imgcol($tt1)
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col4 = [
-		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_4.jpg',
+		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_4.jpg',
+		'imageUrl' => 'https://pacific-scrubland-67443.herokuapp.com/ColMenu_4.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
 		'action' => $col4_act
@@ -209,7 +213,8 @@ function temp2imgcol($tt1)
 		'data' => 'action=buy&itemid=111'	
 		];
 	$col5 = [
-		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_5.jpg',
+		//'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_5.jpg',
+		'imageUrl' => 'https://pacific-scrubland-67443.herokuapp.com/ColMenu_5.jpg',
 		'title' => 'This is menu.',
 		'text' => 'Discription',
 		'action' => $col5_act
