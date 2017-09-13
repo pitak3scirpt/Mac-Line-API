@@ -195,6 +195,7 @@ function temp2imgcol($tt1)
 		'type' => 'postback',
 		'label' => 'MAC Power Flow',
 		'data' => 'action=buy&itemid=111'	
+		];
 	$col1 = [
 		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_1.jpg',
 		'title' => 'This is menu.',
@@ -206,6 +207,7 @@ function temp2imgcol($tt1)
 		'type' => 'postback',
 		'label' => 'Substation Walk Around',
 		'data' => 'action=buy&itemid=111'	
+		];
 	$col2 = [
 		'imageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FColMenu_2.jpg',
 		'title' => 'This is menu.',
