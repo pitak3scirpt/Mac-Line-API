@@ -1,6 +1,16 @@
 <?php
 include 'headbot.php';
 // Function Return message
+// Function Return message
+function t1($tt1)
+{
+	$messages = [
+		'type' => 'text',
+		'text' => $tt1
+		];
+	return $messages;
+}
+
 function temp2op($tt1)
 {
 	$act1 = [
@@ -28,7 +38,8 @@ $text = "TestTest";
 if (!is_null($text)) {
 //if (!empty($_POST)){
 	//$text = "ได้รับ Mail จาก :".$return_path."\nหัวข้อ :".$subject."\nเนื่อหา".$plain;
-	$messages = temp2op($text);
+	$messages = t1($text);
+	//$messages = temp2op($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
   		'to' => 'Cff6b78bc839c9f764ffff0f066606681',
