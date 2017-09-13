@@ -81,7 +81,7 @@ function temp2caro($tt1)
 	$col1 = [
 		'thumbnailImageUrl' => 'https://ecs.egat.co.th/index.php/apps/gallery/ajax/image.php?file=fd20b4335410e38c017713bd6d458deb%2F%2FMac_Share_Menu.jpg',
 		'title' => 'This is menu.',
-		'text' => 'Discription'
+		'text' => 'Discription',
 		'actions' => [$col1_1,$col1_2,$col1_3]
 		];
 	
