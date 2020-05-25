@@ -15,8 +15,8 @@ $strget = $_GET["strget"];
 
 //$strget = utf8_decode($strget)
 //$strget = mb_convert_encoding($strget, 'UTF-8');
-$text = $strget;
-//$text = "TestTest";
+//$text = $strget;
+$text = "TestTest";
 	
 	
 if (!is_null($text)) {
@@ -25,7 +25,7 @@ if (!is_null($text)) {
 	$messages = t1($text);
 	$url = 'https://api.line.me/v2/bot/message/push';
 	$data = [
-  		'to' => 'Cff6b78bc839c9f764ffff0f066606681',
+  		'to' => 'Uf95ee3607bc3d6696b2116de202f97d3',
 		'messages' => [$messages]
 		];
 	$post = json_encode($data);
